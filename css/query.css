@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1290px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .toggle {
+        display: block;
+    }
+
+    .section-1 {
+        visibility: hidden;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .main-container .main-wrap {
+        grid-template-columns: repeat(1, 350px);
+        row-gap: 35px;
+    }
+}

@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@200;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --crimson: #f72585;
+    --white: rgb(255,255,255);
+    --deepblue: #3a0ca3;
+    --lightblue: #4cc9f0;
+    --blue: #32577d;
+    --whitesmoke: #e7e5e8;
+    --black: #000000;
+}
+
+body,html {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    /* list-style: none; */
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--black);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: capitalize;
+}
+
+li, ul {
+    list-style: none;
+}
+
+p {
+    font-size: 0.76rem;
+}
+
+.shadow  {
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--black);
+    height: 7vh;
+    padding: .9rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+    z-index: 1000;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header a {
+    color: var(--whitesmoke);
+    opacity: .6;
+    margin-right: 35px;
+    transition: .6s;
+    font-size: .9rem;
+    text-transform: capitalize;
+}
+
+.header a:hover {
+    opacity: 1;
+}
+
+header .section-2 ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TOGGLE MENU */
+
+.toggle {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    z-index: 1000;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.la-bars {
+    color: white;
+}
+
+
+
+
+
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 100px;
+    background-color: var(--white);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    text-align: center;
+    z-index: 100;
+    /* display: none; */
+}
+
+.sidebar ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--whitesmoke);
+    cursor: pointer;
+    transition: .6s;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--whitesmoke);
+    color: var(--whitesmoke);
+}
+
+.sidebar li a:active {
+    color: var(--crimson);
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.cancel {
+    margin-left: 120px;
+}
+
+.sidebar .wrap {
+    position: relative;
+}
+
+
+.display {
+    display: block;
+}
+
+.la-times-circle {
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+/* MAIN */
+
+.main {
+    padding-left: 100px;
+    position: absolute;
+    left: -100px;
+    right: 0;
+    padding-top: 55px;
+}
+
+.main .activate {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+.main .flex-activate {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .flex-activate a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+.welcome {
+    text-align: center;
+    background-color: var(--whitesmoke);
+    padding: 1.4rem 0;
+    padding-top: 60px;
+}
+
+.welcome h1 {
+    margin-bottom: 12px;
+}
+
+
+
+/* MAIN CONTAINER */
+
+.main-container {
+    text-align: center;
+    background-color: var(--white);
+    width: 100%;
+}
+
+/* .container {
+    width: 1440px;
+} */
+
+.main-container .card {
+    padding: 1rem;
+    flex-basis: 300px;
+    transition: .6s;
+    position: relative;
+    text-align: left;
+}
+
+
+
+
+.main-container .card:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.main-container .card:hover .button{
+    background-color: var(--white);
+}
+
+.main-container .card:hover .more{
+    color: var(--white);
+}
+
+
+.main-container .main-wrap {
+    column-gap: 25px;
+    row-gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 6rem 14rem;
+}
+
+
+.main-container .card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.main-container .card p {
+    margin-bottom: 10px;
+}
+
+.main-wrap .card .more {
+    text-decoration: underline;
+    font-size: .85rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.button {
+    background-color: var(--blue);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 20px;
+    position: relative;
+    text-align: center;
+    transition-property: background,color,border,box-shadow;
+    transition: all .2s;
+}
+
+
+
+
+
+.inventory {
+    background-color: var(--white);
+    justify-content: space-between;
+    margin-right: 25px;
+}
+
+.inventory-box {
+    flex-basis: 70%;
+}
+
+.inventory-container {
+    text-align: left;
+}
+
+.quickstart-container {
+    flex-basis: 30%;
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.quickstart-container img {
+    height: 85px
+}
+
+video {
+    width: 100%;
+}
+
+.inventory-container .video {
+    margin-right: 20px;
+}
+
+.invent {
+    background-color: var(--whitesmoke);
+    margin: 0 auto;
+    /* padding: 80px; */
+    padding: 6rem 14rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-text h2{
+    margin-bottom: 12px;
+}
+
+.video-text p{
+    margin-bottom: 3rem;
+    font-size: .9rem;
+}
+
+.guide-box p {
+    margin-bottom: 2rem;
+    font-size: .9rem;
+}
+
+.inventory {
+    padding: 1.5rem;
+}
+
+.inventory-container {
+    display: flex;
+}
+
+.inventory-wrap {
+    display: flex;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10000000;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

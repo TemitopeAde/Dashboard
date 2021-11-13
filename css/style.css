@@ -154,6 +154,13 @@ header .section-2 ul{
     /* display: none; */
 }
 
+.closebtn2 {
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+}
+
+
 .closebtn {
     position: absolute;
     top: 0;
@@ -666,6 +673,7 @@ to {opacity: 1}
     background-color: var(--whitesmoke);
     padding: 0 1rem;
     text-align: left;
+    transition: 1s;
 }
 
 .new-sidebar li a{

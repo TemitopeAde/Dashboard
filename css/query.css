@@ -39,9 +39,17 @@
         visibility: hidden;
     }
 
-    /* .sidebar {
+    .sidebar {
         transform: translateX(-100%);
-    } */
+    }
+
+    .closebtn {
+        display: block;
+    }
+
+    .new-sidebar {
+        transform: translateX(-1000%);
+    }
 
     body {
         font-size: 14px;
@@ -146,6 +154,29 @@
         align-items: center;
         row-gap: 25px;
         padding: 1rem;
+    }
+
+
+    .gift-card-wrapper {
+        display: block;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .introduction .introduction-wrap {
+        width: 100%;
+    }
+
+    .gift-card-wrapper .container {
+        margin-bottom: 50px;
+    }
+
+    #catalog-main {
+        margin-left: 0px;
+    }
+
+    .main .activate {
+        left: 0;
     }
     
 }

@@ -1,15 +1,17 @@
-// var openToggle = document.querySelector('.bars');
-// var sidebar = document.querySelector('.sidebar');
-// var cancel = document.querySelector('.cancel');
+var openToggle = document.querySelector('.bars');
+var sidebar = document.querySelector('.sidebar');
+var closebtn = document.querySelector('.closebtn')
 
-// openToggle.addEventListener('click', function() {
-//     sidebar.classList.toggle('active');
-// });
+openToggle.addEventListener('click', function () {
+  sidebar.style.transform = "translateX(0)";
+});
 
 
-// cancel.addEventListener('click', function() {
-//     sidebar.classList.toggle('active');
-// });
+closebtn.addEventListener('click', function() {
+  sidebar.style.transform = "translateX(-100%)"
+})
+
+
 
 
 var slideIndex = 1;

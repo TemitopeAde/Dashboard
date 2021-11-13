@@ -25,6 +25,10 @@ body,html {
     text-align: center;
 }
 
+.cwhite {
+    color: white;
+}
+
 img {
     width: 100%;
 }
@@ -102,6 +106,10 @@ header .section-2 ul{
     display: none;
 }
 
+.fa-expand-arrows-alt {
+    color: var(--blue);
+}
+
 .la-bars {
     color: white;
 }
@@ -134,15 +142,24 @@ header .section-2 ul{
 /* SIDEBAR */
 
 .sidebar {
-    width: 100px;
+    width: 130px;
     background-color: var(--white);
     height: 100%;
     position: fixed;
     left: 0;
     top: 50px;
-    text-align: center;
+    text-align: left;
     z-index: 2000000;
+    transition: 0.5s; 
     /* display: none; */
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    font-size: 30px;
+    display: none;
 }
 
 .sidebar ul li,
@@ -151,7 +168,12 @@ header .section-2 ul{
     border-bottom: 1px solid var(--whitesmoke);
     cursor: pointer;
     transition: .6s;
+    padding-left: 10px;
 }
+
+
+
+
 
 .sidebar ul li:hover {
     background-color: var(--whitesmoke);
@@ -987,6 +1009,54 @@ to {opacity: 1}
 h2.products {
     color: white;
 }
+
+
+
+
+
+
+/* PRICE BOOKS */
+
+.introduction .introduction-wrap {
+    color: var(--white);
+    padding: 3rem;
+    width: 70%;
+}
+
+.introduction {
+    margin: 0 auto;
+}
+
+.introduction .introduction-wrap p {
+    margin-bottom: 23px;
+    font-size: 1rem;
+}
+
+.introduction .introduction-wrap a {
+    color: var(--blue);
+    background-color: white;
+}
+
+
+.icon {
+    margin-right: 15px;
+}
+
+.gift-card-wrapper {
+    padding: 5rem 6rem;
+    column-gap: 40px;
+}
+
+.gift-card-wrapper img {
+    /* height: 70px; */
+    width: 100px;
+}
+
+.gift-card-wrapper .container h1 {
+    margin-bottom: 20px;
+}
+
+
 
 
 

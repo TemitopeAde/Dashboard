@@ -46,6 +46,10 @@ li, ul {
     list-style: none;
 }
 
+::placeholder {
+    font-family: 'Raleway', sans-serif;
+}
+
 p {
     font-size: 0.76rem;
 }
@@ -107,13 +111,12 @@ header .section-2 ul{
 }
 
 .fa-expand-arrows-alt {
-    color: var(--blue);
+    color: var(--white);
 }
 
 .la-bars {
     color: white;
 }
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -136,6 +139,11 @@ header .section-2 ul{
     background: var(--blue)
   }
 
+  .flex-around {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
 
 
 
@@ -295,6 +303,7 @@ header .section-2 ul{
 
 .main-container .card:hover .button{
     background-color: var(--white);
+    transition: .7s;
 }
 
 .main-container .card:hover .more{
@@ -306,6 +315,7 @@ header .section-2 ul{
     display: inline-block;
     width: 100%;
     font-size: .7rem;
+    transition: .7s;
 }
 
 .main-container .main-wrap {
@@ -346,7 +356,7 @@ header .section-2 ul{
     display: inline-block;
     padding: .5rem .9rem;
     text-align: center;
-    transition: all .2s;
+    transition: all .7s;
 }
 
 .button-2 {
@@ -558,6 +568,7 @@ to {opacity: 1}
     text-align: center;
     transition-property: background,color,border,box-shadow;
     transition: all .2s;
+    transform: translateX(5px);
 }
 
 
@@ -668,13 +679,15 @@ to {opacity: 1}
     position: fixed;
     left: 100px;
     top: 50px;
-    text-align: center;
+    text-align: left;
     z-index: 2000000;
     background-color: var(--whitesmoke);
-    padding: 0 1rem;
+    padding: 0 .2rem;
     text-align: left;
     transition: 1s;
 }
+
+
 
 .new-sidebar li a{
     transition: .7s;
@@ -831,6 +844,16 @@ to {opacity: 1}
     border-radius: 4px;
     transition: all .2s;
     transition-property: border-color,box-shadow;
+}
+
+.input:focus,
+ select:focus,
+ textarea:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: var(--blue);
+    outline: 0;
+    box-shadow: 0 0 0 .2rem var(--blue);
 }
 
 .select-input {
@@ -1063,6 +1086,165 @@ h2.products {
 .gift-card-wrapper .container h1 {
     margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+/* SELL.HTML */
+
+.sellform1 {
+    position: relative;
+    margin-top: 4rem;
+}
+
+.sellform1 label {
+    float: left;
+    margin-bottom: .5rem;
+}
+
+.sellform1 form {
+    /* padding: 0 3rem; */
+}
+
+.sell-content {
+    padding: 3rem 6rem;
+}
+
+.sell-content label {
+    color: var(--white);
+}
+
+.sell-content .content-box {
+    margin-top: 30px;
+}
+
+.nav p {
+    margin-right: 10px;
+    height: 4rem;
+    width: 4.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: .7s;
+    padding: 3px;
+}
+
+.nav p:hover {
+    background-color: var(--lightblue);
+    color: white;
+}
+
+.nav p:hover::before {
+    background-color: var(--white);
+}
+
+.nav p::before {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--lightblue);
+    left: 0;
+    content: '';
+    top: 0;
+    transition: .7s;
+}
+
+.nav.flex-between {
+    margin-bottom: 25px;
+}
+
+div.text {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sell-wrap form input{
+    display: block;
+    width: 100%;
+}
+
+.sell-wrap form label {
+    color: var(--lightblue);
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.sell-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--deepblue);
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    transition: .7s;
+}
+
+.sell-button:hover,
+.button:hover{
+    transform: translateX(5px);
+}
+
+.sell-wrap {
+    padding: 3rem;
+    background-color: var(--white);
+    margin-bottom: 40px;
+}
+
+.openclosecontent {
+    padding: 0 7rem;
+    background-color: var(--deepblue);
+}
+
+.openclosecontent .sell-wrap {
+    background-color: var(--deepblue);
+    color: var(--white);
+}
+
+.openclosecontent .sell-wrap label {
+    color: var(--white);
+}
+
+.sell-wrap p {
+    margin-bottom: 15px;
+}
+
+
+textarea {
+    width: 100%;
+    display: block;
+    resize: none;
+    overflow: hidden;
+    line-height: 19.99995px;
+    height: 66px;
+    padding: 12px;
+    padding-left: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

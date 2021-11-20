@@ -178,6 +178,18 @@
     .main .activate {
         left: 0;
     }
+
+    .sell-wrap {
+        margin-bottom: 40px;
+    }
+
+    .sell-content .content-box .sell-wrap {
+        padding: 0 1rem;
+    }
+
+    .openclosecontent {
+        padding: 0 3rem;
+    }
     
 }
 
@@ -199,9 +211,23 @@
     .welcome h1 {
         font-size: .9rem;
     }
+    .sell-content {
+        padding: 3rem 3rem;
+    }
+
+    .openclosecontent {
+        padding: 0 1rem;
+    }
 }
 
 
+
+
+@media only screen and (max-width: 375px) {
+    .openclosecontent {
+        padding: 0 .5rem;
+    }
+}
 
 
 

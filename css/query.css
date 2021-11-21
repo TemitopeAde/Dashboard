@@ -190,6 +190,19 @@
     .openclosecontent {
         padding: 0 3rem;
     }
+
+    .sales-form .first-form, .sales-form .hidden-form {
+        display: block;
+        padding: 0 2rem;
+    }
+
+    .input {
+        padding-left: 4px;
+    }
+
+    .sales-form .first-form, .sales-form .hidden-form {
+        margin-bottom: 0;
+    }
     
 }
 
@@ -218,6 +231,20 @@
     .openclosecontent {
         padding: 0 1rem;
     }
+    .sell-wrap .box {
+        padding: .5rem;
+    }
+
+    .tab a {
+        margin-right: 10px;
+        padding-bottom: 12px;
+        display: inline-block;
+        padding: .5rem;
+    }
+
+    .input {
+        padding-left: 3px;
+    }
 }
 
 
@@ -226,6 +253,10 @@
 @media only screen and (max-width: 375px) {
     .openclosecontent {
         padding: 0 .5rem;
+    }
+
+    .flex-activate h5 {
+        font-size: 9px;
     }
 }
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/MCDatepicker-master/dist/mc-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.css" integrity="sha512-Q0DfJ+I5cbH4Wm20NlPZ/fENHil7k3ZgzI9b71LfQAB1IlM8Gt7aO7eOPX2QzYT+4fZaF6u1kSfZAHczl4r/9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.css" integrity="sha512-ER4UboXz0D7MsL69jRMtQtUry+lwKW4FOhcsD7BUOawqT4Dgq1Tr3Y2i0zBFGm9c3jHNg0gWnPPqzju0CTeOMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,9 +48,7 @@
             <!-- TOGGLE MENU  -->
             <div class="toggle">
                 <div class="bars">
-                    <a href="javascript:void(0)">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </a>
+                    <i class="las la-bars"></i>
                 </div>
             </div>
             <!-- TOGGLE MENU ENDS  -->
@@ -59,10 +57,14 @@
         <!-- HEADER ENDS -->
 
 
-         <!-- sidebar starts -->
-         <div class="sidebar shadow">
+        <!-- sidebar starts -->
+        <div class="sidebar shadow">
             <div class="wrap">
                 <ul>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closebtn">
+                        x
+                    </a>
+
                     <li>
                         <a href="index.html">
                             <span class="icon"><i class="fa-solid fa-house-user"></i></span>
@@ -178,152 +180,119 @@
                     </div>
                 </div>
     
-                <h2 class="products" style="color: white; padding-top: 80px;">Stock Control</h2>
+                <h2 class="products">Serial Numbers</h2>
 
                 <div class="content">
                     <div class="content-box">
-                        <div class="content-wrap-grid">
-                            <div class="section-one center">
+                        <div class="promotion-wrap-grid">
+                            <div class="section-one">
                                 <div class="add-hero">
-                                    <h3>A list of all of your consignments<a href="#">Need help?</a></h3>
+                                    <h3>Track where products with serial numbers are, or who they’ve been sold to. 
+                                        <a href="#" style="display: inline-block; margin-left: 10px">Need help?</a>
+                                    </h3>
                                     <div class="import-button">
-                                        <a href="#" class="danger-button">Order Stock</a>
-                                        <a href="#" class="danger-button">Receive Stock</a>
-                                        <a href="#" class="danger-button">Return Stock</a>
-                                        <a href="#" class="danger-button">Transfer Stock</a>
+                                        <a href="#" class="button shadow">Add Serial Numbers</a>
+                                        
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="section-four">
-                                <div class="section-four-box inventorywrap">
-                                    <div class="container shadow inventorybox flex-around">
-                                        <div class="container-image">
-                                            <img src="/images/set-up-inventory-v3.svg" alt="image">
-                                        </div>
-                                        <div class="container-text">
-                                            <h2>Update inventory levels to get selling.</h2>
-                                            <p>Track inventory levels to know exactly which products are 
-                                                in stock and able to be sold. 
-                                                We’ll help you get your current inventory levels into Vend 
-                                                depending on how you’re keeping track 
-                                                of your inventory at the moment.
-                                            </p>
-                                            <div class="container-btn">
-                                                <a href="#" class="danger-button shadow">Get Started</a>
-                                                <a href="#" class="button-2-white">Dismiss</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="section-three">
+                             <div class="serial-container">
                                 <div class="sales-form">
                                     <form>
                                         <div class="first-form">
-                                            <div class="status item stock-item">
-                                                <label for="status">Show</label>
+                                            <div class="status item">
+                                                <label for="status">Outlet</label>
                                                 <select class="input" id="status">
-                                                    <option value="">All Orders</option>
-                                                    <option value="">Open Orders</option>
-                                                    <option value="">Dispatched Orders</option>
-                                                    <option value="">Sent Returns</option>
-                                                    <option value="">Received Orders</option>
-                                                    <option value="">Overdue Orders</option>
-                                                    <option value="">Cancelled Orders</option>
-                                                    <option value="">Failed Orders</option>
-                                                </select>
-                                            </div>
-                                            <div class="customer item stock-item">
-                                                <label for="customer">Name/Number/Label/Supplier Invoice</label>
-                                                <input id="customer" type="text" class="input" placeholder="">
-                                            </div>
-                                            <div class="receipt item stock-item">
-                                                <label for="receipt">Outlet</label>
-                                                <select class="input">
                                                     <option value="">Main Outlet</option>
-                                                    <option value="">Branch</option>
+                                                </select>
+                                            </div>
+                                            <div class="status item">
+                                                <label for="status">Status</label>
+                                                <select class="input" id="status">
+                                                    <option value="">All open sales</option>
+                                                    <option value="">New</option>
+                                                    <option value="">In Progress</option>
+                                                    <option value="">Packed</option>
+                                                </select>
+                                            </div>
+                                            <div class="status item">
+                                                <label for="status">Type</label>
+                                                <select class="input" id="status">
+                                                    <option value="">All</option>
+                                                    <option value="">Delivery</option>
+                                                    <option value="">Pickup</option>
                                                 </select>
                                             </div>
                                         </div>
-                                        
-
-                                        <div class="hidden2 toggleform">
-                                            <div class="hidden-form2">
-                                                <div class="hidden-form-2">
-                                                    <div class="outlet item stock-item">
-                                                        <label for="datefrom">Date From</label>
-                                                        <input class="input" id="datefrom" type="text" />
-                                                    </div>
-                                                    <div class="outlet item stock-item">
-                                                        <label for="dateto">Date To</label>
-                                                        <input class="input" id="dateto" type="text" />
-                                                    </div>
-        
-                                                    <div class="outlet item stock-item">
-                                                        <label for="dateto">Due Date From</label>
-                                                        <input class="input" id="duedatefrom" type="text" />
-                                                    </div>
-                                                    <div class="outlet item stock-item">
-                                                        <label for="dateto">Due Date To</label>
-                                                        <input class="input" id="duedateto" type="text" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="supplier-tab">
-                                                    <label for="supplier-tab">Supplier</label>
-                                                    <select class="input">
-                                                        <option value="1">Remi</option>
-                                                        <option value="2">Temi</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        
-                                        <button class="toggle-button-2">
-                                            More Filters
-                                        </button>
                                         <button type="submit" class="button">Search</button>
                                     </form>
                                 </div>
                             </div>
+                            
+
+                            <div class="section-four-box">
+                                <div class="table-wrap">
+
+                                    <div class="row" style="color: crimson;">
+                                        <div class="column">
+                                            <h3>Serial Number</h3>
+                                        </div>
+                                        <div class="column">
+                                            <h3>Product</h3> 
+                                        </div>
+                                        <div class="column">
+                                            <h3>Outlet</h3>
+                                        </div>
+                                        <div class="column">
+                                            <h3>Sold On</h3>
+                                        </div>                                                                                                                                                                                                                                                                                           
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="column">
+                                            <h5>01</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>Laptop</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>Main Outlet</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>12-10-2021</h5>
+                                        </div>                                                                                                                                                                                                                                                                                           
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="column">
+                                            <h5>02</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>Phone</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>Outlet</h5>
+                                        </div>
+                                        <div class="column">
+                                            <h5>23-12-2021</h5>
+                                        </div>                                                                                                                                                                                                                                                                                           
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-    
-    
-                
-
-                
+                </div>                
             </div>
         </div>
-        
-    <!-- <script src="js/main.js"></script> -->
-    <script src="/MCDatepicker-master/dist/mc-calendar.min.js"></script>
-    <script>
-        const firstDate = MCDatepicker.create({ 
-            el: ['#datefrom'],
-            dateFormat: 'MMM-DD-YYYY',
-        });
-
-        const secondDate = MCDatepicker.create({ 
-            el: ['#dateto'],
-            dateFormat: 'MMM-DD-YYYY',
-        });
-
-        const thirdDate = MCDatepicker.create({ 
-            el: ['#duedatefrom'],
-            dateFormat: 'MMM-DD-YYYY',
-        });
-
-        const fourthDate = MCDatepicker.create({ 
-            el: ['#duedateto'],
-            dateFormat: 'MMM-DD-YYYY',
-        });
-    </script>
-    <script src="js/main2.js"></script>
     
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
 </html>

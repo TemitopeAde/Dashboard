@@ -6,9 +6,22 @@ var newSidebar = document.querySelector('.new-sidebar')
 
 
 var toggleButton = document.querySelector('.toggle-button')
+var toggleButton2 = document.querySelector('.toggle-button-2')
 var hiddenForm = document.querySelector('.hidden')
-
+var hiddenForm2 = document.querySelector('.hidden2')
 // console.log(hiddenForm)
+
+
+var dismiss = document.querySelector('#dismiss');
+var text = document.querySelector('.inventorywrap')
+
+
+dismiss.addEventListener('click', function() {
+  text.classList.add('active')
+})
+
+
+
 
 toggleButton.addEventListener('click', function(e) {
   e.preventDefault();
@@ -16,6 +29,12 @@ toggleButton.addEventListener('click', function(e) {
   toggleButton.innerHTML = ''
 })
 
+
+toggleButton2.addEventListener('click', function(e) {
+  e.preventDefault();
+  hiddenForm2.classList.toggle('toggleform');
+  toggleButton.innerHTML = ''
+})
 
 
 
@@ -34,6 +53,7 @@ openToggle.addEventListener('click', function () {
 //   newSidebar.style.transform = "translateX(1000%)";
   
 // })
+
 
 
 

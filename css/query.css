@@ -203,7 +203,46 @@
     .sales-form .first-form, .sales-form .hidden-form {
         margin-bottom: 0;
     }
+
+    .closebtn2 {
+        display: block;
+    }
+
+    .status {
+        padding: 2rem 2rem;
+    }
+
+    .settings-wrap {
+        display: block;
+    }
     
+    .section-1-2 {
+        margin-top: 20px;
+    }
+
+    .new-layout {
+        display: block;
+    }
+    
+    .new-layout h3 {
+        padding: 5px
+    }
+
+    .new-layout-items {
+        padding: 5px
+    }
+
+    .layout-btn {
+        padding: 5px
+    }
+
+    .inventory-grid {
+        display: block;
+    }
+
+    .inventory-grid .start-date {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -257,6 +296,10 @@
 
     .flex-activate h5 {
         font-size: 9px;
+    }
+
+    .status {
+        padding: 1rem;
     }
 }
 

@@ -1701,13 +1701,14 @@ table.customTable {
  label {
      text-align: left;
      display: flex;
+     font-size: 0.7rem;
  }
 
  .customer-form-show {
      display: grid;
      grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
-    
+    margin-bottom: 30px;
  }
 
  .customer-form {
@@ -1716,6 +1717,7 @@ table.customTable {
 
  .customer-form-hide {
      transition: .8s;
+     margin-bottom: 4rem
  }
 
 .customer-hide {
@@ -1727,4 +1729,89 @@ table.customTable {
 
 .customer-hide .datepicker label {
     padding-top: 0;
+}
+
+.search-box {
+    padding: 30px 2rem
+}
+
+.customer-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    text-align: left;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: .7px solid var(--white);
+    position: relative;
+}
+
+#first-column {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.column h3{
+    font-size: 0.8rem;
+}
+
+.column h5 {
+    color: var(--white)
+}
+
+.column a,
+.column small{
+    color: var(--white);
+}
+
+.customer-table {
+    padding-bottom: 3rem;
+}
+
+.customer-row-hide {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 10000;
+    padding: 1rem;
+    transition: .8s;
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.toggle {
+    display: none;
+}
+
+.profile h3 {
+    border-bottom: 0.8px solid var(--lightblue);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+}
+
+.balance-profit-grid,
+.balance-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 25px;
+}
+
+.balance-grid {
+    margin-bottom: 8px;
+}
+
+.profile-buttons {
+    margin-top: 25px;
+}
+
+.toggle-customer-button {
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }

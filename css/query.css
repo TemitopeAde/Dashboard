@@ -243,6 +243,10 @@
     .inventory-grid .start-date {
         margin-bottom: 20px;
     }
+
+    .balance-profit-grid {
+        display: block;
+    }
 }
 
 

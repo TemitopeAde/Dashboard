@@ -5,9 +5,6 @@ var closebtn2 = document.querySelector('.closebtn2')
 var newSidebar = document.querySelector('.new-sidebar')
 
 
-
-
-
 var toggleButton2 = document.querySelector('.toggle-button-2')
 var hiddenForm2 = document.querySelector('.hidden2')
 // console.log(hiddenForm)
@@ -15,6 +12,29 @@ var hiddenForm2 = document.querySelector('.hidden2')
 
 var toggleCustomer = document.querySelector('.toggle-customer-button');
 var customerHiddenForm = document.querySelector('.customer-form-hide');
+
+
+
+var toggleDetails = document.getElementsByClassName('toggleDetails');
+
+
+// console.log(details)
+
+for (var i = 0; i < toggleDetails.length; i++) {
+  var detail = document.getElementsByClassName('customer-row-hide')[i]
+  toggleDetails[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    detail.classList.toggle('toggle')
+    console.log(detail.classList)
+  })
+}
+
+
+// toggleDetails.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   details.classList.toggle('toggle');
+// });
+
 
 toggleCustomer.addEventListener('click', function(e) {
   e.preventDefault();

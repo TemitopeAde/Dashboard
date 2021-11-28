@@ -15,7 +15,7 @@ var customerHiddenForm = document.querySelector('.customer-form-hide');
 
 
 
-var toggleDetails = document.getElementsByClassName('toggleDetails');
+var toggleDetails = document.querySelectorAll('.toggleDetails');
 
 
 // console.log(details)
@@ -29,11 +29,12 @@ for (var i = 0; i < toggleDetails.length; i++) {
   })
 }
 
+// toggleDetails.forEach(name => {
+//   var detail = document.getElementsByClassName('customer-row-hide')[name]
+  
+// })
 
-// toggleDetails.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   details.classList.toggle('toggle');
-// });
+
 
 
 toggleCustomer.addEventListener('click', function(e) {

@@ -247,6 +247,34 @@
     .balance-profit-grid {
         display: block;
     }
+    .group-table {
+        padding: 30px 1.5rem;
+    }
+    .store-setup .store,
+    .basic-setup .basic,
+    .address-setup .address{
+        display: block;
+        padding: 2rem 1.55rem
+    }
+    .store-setup .grid-1,
+    .store-setup .grid-2{
+        
+    }
+    .address .grid-2 {
+        margin-top: 3rem;
+    }
+
+    .submit-buttons {
+        left: 1.55rem
+    }
+    .store-setup h3,
+    .basic-setup h3,
+    .address-setup h3{
+        padding: 19px 1.55rem;
+        background: var(--lightblue);
+        color: var(--white);
+    }
+
 }
 
 

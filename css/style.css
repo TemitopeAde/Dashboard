@@ -1377,6 +1377,26 @@ table.customTable {
     font-family: 'Raleway', sans-serif;
 }
 
+.cancel-button {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    padding: .5rem .9rem;
+    text-align: center;
+    transition: all .7s;
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    background: rgba(0, 88, 4, 0.75);
+}
+
+
+
+
 .button-2 {
     background-color: crimson;
 }
@@ -1486,11 +1506,12 @@ table.customTable {
 
 .fa-pen-alt,
 .fa-folder,
-.fa-trash-alt {
+.fa-trash-alt,
+.fa-user-edit {
     cursor: pointer;
-    padding: 10px;
-    background: var(--crimson);
+    padding: 5px;
     border-radius: 5px;
+    background: none;
 }
 
 .layout a {
@@ -1814,4 +1835,116 @@ table.customTable {
     color: white;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
+}
+
+.customer-hidden {
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 10px;
+    height: 100%;
+    background: greenyellow;
+}
+
+.group-table-grid .row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) 2fr;
+    border-bottom: 1px solid var(--lightblue);
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.group-table {
+    padding: 30px 4rem
+}
+
+.table-body.row {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) 2fr;
+    border-bottom: 1px solid var(--lightblue);
+    text-align: left;
+    padding: 15px 0;
+    align-items: center;
+}
+
+.table-body .column-3 {
+    
+}
+
+.table-body .row-button {
+    display: flex;
+    column-gap: 7px;
+}
+
+.table-body {
+    position: relative;
+}
+
+.table-body .row-button {
+    position: absolute;
+    right: 10px;
+}
+
+.store-setup .store,
+.basic-setup .basic,
+.address-setup .address{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    padding: 2rem 5rem;
+    position: relative;
+}
+
+
+.submit-buttons {
+    position: absolute;
+    bottom: -20px;
+    left: 5rem
+}
+
+.store-setup,
+.basic-setup,
+.address-setup{
+    text-align: left;
+}
+
+.store-setup h3,
+.basic-setup h3,
+.address-setup h3{
+    padding: 19px 5rem;
+    background: var(--lightblue);
+    color: var(--white);
+}
+
+.store-setup .grid-1,
+.store-setup .grid-2,
+.basic-setup .grid-1,
+.basic-setup .grid-2,
+.address-setup .grid-2,
+.address-setup .grid-1{
+    line-height: 35px;
+}
+
+.form-sections {
+    padding: 2rem 0;
+}
+
+.name-div {
+    display: flex;
+    column-gap: 10px;
+}
+
+.address .grid-1,
+.address .grid-2{
+    position: relative;
+}
+
+.physical-address {
+    position: absolute;
+    top: -30px;
 }

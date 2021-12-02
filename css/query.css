@@ -275,11 +275,41 @@
         color: var(--white);
     }
 
+    .users-container form {
+        display: block;
+        padding: 1.5rem
+    }
+
+    .users-container .form-field {
+        margin-bottom: 30px;
+    }
+    .user-table-container {
+        padding: 0 1rem;
+    }
+
+    .user-table-head h3 {
+        font-size: .6rem;
+    }
+    .app-2-grid,
+    .app-1-grid,
+    .app-3-grid {
+        display: block;
+    }
+
+    .app-sections .apps,
+    .app-sections .app {
+        margin-bottom: 35px;
+    }
 }
 
 
 
 @media only screen and (max-width: 540px) {
+
+    .user-table-container {
+        padding: 0rem;
+    }
+
     .invent {
         padding: 6rem 2rem;
     }
@@ -316,8 +346,38 @@
     .input {
         padding-left: 3px;
     }
+
+    .user-table-row {
+        align-items: center;
+        padding: 0.3rem 0;
+    }
+
+    .user-table-head {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .user-table-head h3 {
+        font-size: 0.5rem;
+    }
 }
 
+
+
+@media only screen and (max-width: 414px) {
+    .user-table-head,
+    .user-table-row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) repeat(3,2fr) repeat(2,1fr);
+    column-gap: 10px;
+    align-items: center;
+}
+
+.user-table-row p {
+    font-size: .5rem;
+}
+
+}
 
 
 
@@ -332,6 +392,10 @@
 
     .status {
         padding: 1rem;
+    }
+
+    .user-table-body p {
+        font-size: .45rem;
     }
 }
 

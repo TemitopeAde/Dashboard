@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/query.css">
 </head>
-<body class="body">
+<body style="background-color: var(--whitesmoke);">
 
         <!-- HEADER START -->
         <header class="shadow">
@@ -47,7 +47,9 @@
             <!-- TOGGLE MENU  -->
             <div class="toggle">
                 <div class="bars">
-                    <i class="las la-bars"></i>
+                    <a href="javascript:void(0)">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
                 </div>
             </div>
             <!-- TOGGLE MENU ENDS  -->
@@ -56,14 +58,10 @@
         <!-- HEADER ENDS -->
 
 
-        <!-- sidebar starts -->
-        <div class="sidebar shadow">
+         <!-- sidebar starts -->
+         <div class="sidebar shadow">
             <div class="wrap">
                 <ul>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closebtn">
-                        x
-                    </a>
-
                     <li>
                         <a href="index.html">
                             <span class="icon"><i class="fa-solid fa-house-user"></i></span>
@@ -123,59 +121,45 @@
         <div class="new-sidebar shadow">
             <div class="wrap">
                 <ul>
-
                     <a href="javascript:void(0)" class="closebtn2" onclick="closebtn">
                         x
                     </a>
 
                     <li>
-                        <a href="catalog.html">
-                            <span class="title"><h5>Products</h5></span>
+                        <a href="sell.html">
+                            <span class="title"><h5>Sell</h5></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="promotions.html">
-                            <span class="title"><h5>Promotions</h5></span>
+                        <a href="openclose.html">
+                            <span class="title"><h5>Open / Close</h5></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="pricebooks.html">
-                            <span class="title"><h5>Price Books</h5></span>
+                        <a href="saleshistory.html">
+                            <span class="title"><h5>Sales History</h5></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="brands.html">
-                            <span class="title"><h5>Brands</h5></span>
+                        <a href="cashmanagement.html">
+                            <span class="title"><h5>Cash Management</h5></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="supplier.html">
-                            <span class="title"><h5>Suppliers</h5></span>
+                        <a href="status.html">
+                            <span class="title"><h5>Status</h5></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="productag.html">
-                            <span class="title"><h5>Product Tags</h5></span>
+                        <a href="settings.html">
+                            <span class="title"><h5>Settings</h5></span>
                         </a>
                     </li>
-
-                    <li>
-                        <a href="productypes.html">
-                            <span class="title"><h5>Product Types</h5></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="giftcard.html">
-                            <span class="title"><h5>Gift cards</h5></span>
-                        </a>
-                    </li>
-                    
                 </ul>
             </div>
         </div>
@@ -193,46 +177,36 @@
                     </div>
                 </div>
     
-                <h2 class="products" style="margin-top: 60px;">Brands</h2>
+                <h2 class="products" style="color: var(--blue); padding-top: 80px;">Store Credit</h2>
 
                 <div class="content">
                     <div class="content-box">
-                        <div class="promotion-wrap-grid">               
-
-                            <div class="section-one">
+                        <div class="content-wrap-grid">
+                            <div class="section-one center" style="background-color: var(--white);">
                                 <div class="add-hero">
-                                    <h3>A list of all of your brands.<a href="#">Need help?</a></h3>
-                                    <div class="import-button">
-                                        <a href="#" class="button-2 shadow">Add Brand</a>
-                                    </div>
+                                    <h3>Manage whether your stores offer store credit.</h3>
+                                </div>
+                            </div>
+
+                            
+                            <div class="enable-switch">
+                                <div class="title">
+                                    <h3>Enable Store Credit</h3>
+                                </div>
+                                <div class="content">
+                                    <label class="switch" style="margin-bottom: 12px;">
+                                        <input type="checkbox" id="togBtn">
+                                        <div class="slider round"></div>
+                                    </label>
+                                    <h4>Enable issuing store credit in my store</h4>
+                                    <small>Disabling store credit will mean you can no 
+                                        longer issue store credit or pay by store credit.
+                                    </small>
                                 </div>
                             </div>
 
 
-
-                             <!-- Tab content -->
-                             <div id="current" class="">
-                                <div class="table center">
-                                    <table class="shadow" style="width: 100%;">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Number of Products</th>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="#" class="cwhite">General Price Book</a></td>
-                                            <td>All customers</td>
-                                            <td>All outlet</td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-eye cwhite icon"></i></a>
-                                                <a href="#"><i class="fas fa-pen cwhite icon"></i></a>
-                                                <a href="#"><i class="fas fa-trash cwhite icon"></i></a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -244,6 +218,7 @@
             </div>
         </div>
         
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main2.js"></script>
 </body>
 </html>

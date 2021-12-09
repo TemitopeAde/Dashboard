@@ -12,29 +12,29 @@ var hiddenForm2 = document.querySelector('.hidden2')
 // console.log(hiddenForm)
 
 
-var dismiss = document.querySelector('#dismiss');
-var text = document.querySelector('.inventorywrap')
+// var dismiss = document.querySelector('#dismiss');
+// var text = document.querySelector('.inventorywrap')
 
 
-dismiss.addEventListener('click', function() {
-  text.classList.add('active')
-})
+// dismiss.addEventListener('click', function() {
+//   text.classList.add('active')
+// })
 
 
 
 
-toggleButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  hiddenForm.classList.toggle('toggleform');
-  toggleButton.innerHTML = ''
-})
+// toggleButton.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   hiddenForm.classList.toggle('toggleform');
+//   toggleButton.innerHTML = ''
+// })
 
 
-toggleButton2.addEventListener('click', function(e) {
-  e.preventDefault();
-  hiddenForm2.classList.toggle('toggleform');
-  toggleButton.innerHTML = ''
-})
+// toggleButton2.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   hiddenForm2.classList.toggle('toggleform');
+//   toggleButton.innerHTML = ''
+// })
 
 
 

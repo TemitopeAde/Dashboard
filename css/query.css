@@ -300,12 +300,72 @@
     .app-sections .app {
         margin-bottom: 35px;
     }
+
+    .table-wrap-token {
+        padding: 1rem;
+    }
+
+    .table-wrap-token h3 {
+        font-size: 0.6rem;
+    }
+
+    .table-wrap-token h5 {
+        font-size: .5rem;
+    }
+
+    .enable-switch {
+        column-gap: 13px;
+        padding: 1.3rem;
+    }
+
+    .workflow form {
+        display: block;
+        padding: 1rem;
+        line-height: 40px;
+    }
+    .workflow-table{
+        padding: 1.5rem 1rem;
+    }
+
+    .payment-table {
+        padding: 1rem;
+    }
+
+    .store-report {
+        padding: 30px 1.2rem
+    }
+    .report-show {
+        padding: 1rem
+    }
+
+    .tax-report-hide {
+        padding: 0 1rem;
+    }
+
+    .filter-wrap {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .report-show {
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 15px;
+    }
+    .tax-report-table {
+        padding: 1.5rem 1rem;
+    }
+
+    .giftcard-form {
+        padding: 1rem
+    }
+    
 }
 
 
 
 @media only screen and (max-width: 540px) {
-
+    .giftcard-form .form-container{
+        width: 100%;
+    }
     .user-table-container {
         padding: 0rem;
     }
@@ -359,6 +419,10 @@
 
     .user-table-head h3 {
         font-size: 0.5rem;
+    }
+
+    .column h3 {
+        font-size: 0.6rem;
     }
 }
 

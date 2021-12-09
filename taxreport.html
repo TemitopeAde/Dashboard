@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.css" integrity="sha512-Q0DfJ+I5cbH4Wm20NlPZ/fENHil7k3ZgzI9b71LfQAB1IlM8Gt7aO7eOPX2QzYT+4fZaF6u1kSfZAHczl4r/9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.css" integrity="sha512-ER4UboXz0D7MsL69jRMtQtUry+lwKW4FOhcsD7BUOawqT4Dgq1Tr3Y2i0zBFGm9c3jHNg0gWnPPqzju0CTeOMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/query.css">
 </head>
-<body class="body">
+<body>
 
         <!-- HEADER START -->
         <header class="shadow">
@@ -193,44 +194,93 @@
                     </div>
                 </div>
     
-                <h2 class="products" style="margin-top: 60px;">Brands</h2>
+                <h2 class="products"  style="margin-top: 60px; color: var(--blue);">Tax Report</h2>
 
                 <div class="content">
                     <div class="content-box">
-                        <div class="promotion-wrap-grid">               
-
-                            <div class="section-one">
-                                <div class="add-hero">
-                                    <h3>A list of all of your brands.<a href="#">Need help?</a></h3>
-                                    <div class="import-button">
-                                        <a href="#" class="button-2 shadow">Add Brand</a>
+                        <div class="tax-report-forms">
+                            <div class="tax-report-type">
+                                <form>
+                                    <div class="report-show">
+                                        <div class="report-type">
+                                            <label for="report-type">Report Type</label>
+                                            <select id="report-type" class="input">
+                                                <option value="">Tax report</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="datepicker">
+                                            <label for="date">Date</label>
+                                            <input type="text" name="datefilter" value="" class="input"/>
+                                        </div>
                                     </div>
+                                    
+                                    <div class="tax-report-hide active">
+                                        <div class="tax-report-hide-box">
+                                            <div class="filter">
+                                                <label for="">Filter report by an outlet</label>
+                                                <div class="filter-wrap">
+                                                    <select id="" class="input">
+                                                        <option value="">Include</option>
+                                                        <option value="">Exclude</option>
+                                                    </select>
+                                                    <div class="filter-form">
+                                                        <input type="text" class="input" placeholder="Add a Filter">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="submit-report-tax">
+                                        <button type="submit" class="less">More Filter</button>
+                                        <button type="button" class="danger-button">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="tax-report-table">
+                            
+                            <div class="row">
+                                <div class="column">
+                                    <h3>Tax Code</h3>
+                                </div>
+                                <div class="column">
+                                    <h3>Rate</h3>
+                                </div>
+                                <div class="column">
+                                    <h3>Tax</h3>
+                                </div>
+                                <div class="column">
+                                    <h3>Revenue (Excl. Tax)</h3>
                                 </div>
                             </div>
-
-
-
-                             <!-- Tab content -->
-                             <div id="current" class="">
-                                <div class="table center">
-                                    <table class="shadow" style="width: 100%;">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Number of Products</th>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="#" class="cwhite">General Price Book</a></td>
-                                            <td>All customers</td>
-                                            <td>All outlet</td>
-                                            <td>
-                                                <a href="#"><i class="fas fa-eye cwhite icon"></i></a>
-                                                <a href="#"><i class="fas fa-pen cwhite icon"></i></a>
-                                                <a href="#"><i class="fas fa-trash cwhite icon"></i></a>
-                                            </td>
-                                        </tr>
-                                    </table>
+                            <div class="row">
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
+                                </div>
+                                <div class="column">
+                                    <h5>3000</h5>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +293,43 @@
                 
             </div>
         </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
         
+            $('input[name="datefilter"]').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                    cancelLabel: 'Clear'
+                }
+            });
+        
+            $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+        
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+                $(this).val('');
+            });
+        
+        });
+    </script>
+    <script>
+        var form2 = document.querySelector('.tax-report-hide');
+        var button = document.querySelector('.less');
+        
+        
+        button.addEventListener('click', function(e) {
+            var parent = document.querySelector('.submit-report-tax')
+            e.preventDefault();
+            form2.classList.toggle('active');
+            button.classList.toggle('active');
+            var btn = document.createElement("BUTTON").innerHTML = "Less Option";
+            // parent.appendChild(btn);
+        })
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>

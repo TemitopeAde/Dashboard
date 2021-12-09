@@ -737,20 +737,20 @@ to {opacity: 1}
 
 #catalog-main .content-box .section-one {
     background-color: var(--whitesmoke);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #catalog-main .add-hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem;
+    text-align: center;
+
 }
 
 .section-one .add-hero h3 {
     margin-right: 30px;
+    flex-basis: 60%;
 }
 
 
@@ -961,6 +961,7 @@ to {opacity: 1}
 .import-button {
     display: flex;
     column-gap: 12px;
+    flex-basis: 50%;
 }
 
 
@@ -1397,9 +1398,9 @@ table.customTable {
 
 
 
-.button-2 {
+/* .button-2 {
     background-color: crimson;
-}
+} */
 
 
 .status {
@@ -2137,6 +2138,369 @@ table.customTable {
     row-gap: 30px;
     column-gap: 25px;
 }
+
+.table-wrap-token .row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--white);
+}
+
+.table-wrap-token .row h5{
+    color: var(--lightblue);
+}
+
+.table-wrap-token {
+    text-align: left;
+    padding: 4rem;
+}
+
+
+.enable-switch {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 30px;
+    text-align: left;
+    padding: 4rem;
+}
+
+.workflow form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 35px;
+    padding: 1rem 4rem;
+}
+
+
+.workflow-table{
+    padding: 3rem;
+    text-align: left;
+}
+
+.workflow-table h5 {
+    color: var(--lightblue);
+}
+
+.workflow-table .row{
+    display: grid;
+    grid-template-columns: repeat(2,1.5fr) repeat(2,1fr);
+    column-gap: 20px;
+    padding: 12px;
+    border-bottom: 1px solid var(--white);
+    transition: .7s;
+}
+
+.workflow-2 .row {
+    grid-template-columns: repeat(2,1fr);
+    border-bottom: 1px solid var(--white);
+}
+
+.workflow-2 form {
+   grid-template-columns: repeat(1,1fr);
+   
+}
+
+.workflow-2 button {
+    width: 200px;
+}
+
+.tabcontent-edit {
+    padding: 0;
+}
+
+.contentBx .content{
+    position: relative;
+    background: var(--whitesmoke);
+    height: 0;
+    overflow: hidden;
+    transition: .6s;
+    overflow-y: hidden;
+}
+
+.contentBx.content-box .content {
+    height: 100px;
+    padding: 12px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contentBx .row {
+    border-bottom: 1px solid var(--whitesmoke);
+}
+
+.contentBx .row:first-child {
+    border-top: 1px solid var(--whitesmoke);
+}
+
+#but {
+    background-color: var(--crimson);
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    padding: .5rem .9rem;
+    text-align: center;
+    transition: all .7s;
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+}
+
+.gift-card-wrapper .container {
+    display: flex;
+}
+
+.gift-card-wrapper .container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.gift-card-wrapper .container div h3 {
+    margin: 25px 0;
+}
+
+.payment-table {
+    text-align: left;
+    padding: 4rem;
+    color: var(--lightblue);
+}
+
+.payment-table a{
+    color: var(--lightblue);
+    font-size: 0.8rem;
+}
+
+
+.payment-table .payment-head {
+    border-bottom: 1px solid var(--whitesmoke);
+    padding-bottom: 12px;
+}
+
+.payment-body .row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: .5rem 0;
+    border-bottom: 1px solid whitesmoke;
+}
+
+
+.sales-tax {
+    padding: 2rem
+}
+
+.sales-button {
+    display: flex;
+    column-gap: 20px;
+
+}
+
+.sales-button button {
+    border-radius: 40px;
+}
+
+.sales-head,
+.sales-body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    text-align: left;
+}
+
+.sales-head .row,
+.sales-body .row{
+   border-bottom: 1px solid var(--whitesmoke);
+   padding: 15px
+}
+
+.sales-tax-table-2 {
+    text-align: left;
+    margin: 60px 0
+}
+
+.sales-body h5 {
+    font-weight: 500;
+}
+
+.sales-body .row-2 {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.store-report {
+    text-align: left;
+    padding: 30px 4rem
+}
+
+.report-cap-item {
+    display: flex;
+    align-items: center;
+    column-gap: 200px;
+    margin-bottom: 25px;
+}
+
+.report-cap-item h4:nth-child(2) {
+    font-weight: 500;
+}
+
+.report-cap-item h4:nth-child(1) {
+    flex-basis: 30%;
+}
+
+.report-table .report-head,
+.report-table .report-body{
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3,1fr);
+    column-gap: 30px;
+    border-bottom: 1px solid var(--whitesmoke);
+
+}
+
+.report-table .report-head {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--whitesmoke);
+    padding-bottom: 20px;
+}
+
+.report-table {
+    padding: 2rem 0;
+}
+
+.report-body {
+    padding: 15px 0
+}
+
+.report-body h5 {
+    font-weight: 500;
+}
+
+.report-show {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+    align-items: center;
+    margin-bottom: 35px;
+    padding: 1rem 4rem;
+}
+
+.filter-wrap {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.tax-report-hide {
+    padding: 0 4rem;
+}
+.submit-report-tax {
+    margin: 35px 0;
+    padding: 0 4rem;
+}
+
+.less {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    padding: 20px
+}
+
+.tax-report-hide {
+    transition: .8s;
+}
+
+.tax-report-table .row {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    border-bottom: 1px solid var(--whitesmoke);
+    padding: 15px
+}
+
+.tax-report-table {
+    padding: 1.5rem 4rem;
+    background: whitesmoke;
+    text-align: left;
+}
+
+.tax-report-table h3 {
+    color: var(--crimson);
+}
+
+.tax-report-table h5 {
+    color: var(--lightblue);
+}
+
+.giftcard-form .form-container{
+    display: grid;
+    width: 70%;
+    overflow: hidden;
+}
+
+.giftcard-submit {
+    text-align: left;
+    margin-top: 20px;
+    padding-bottom: 3rem;
+}
+
+.giftcard-form {
+    padding: 0 4rem
+}
+
+.gift-recap {
+    background: whitesmoke
+}
+
+.register-container {
+    display: flex;
+    background: var(--whitesmoke);
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

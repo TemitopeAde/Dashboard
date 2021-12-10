@@ -357,12 +357,38 @@
     .giftcard-form {
         padding: 1rem
     }
-    
+    .giftcard-form .form-container,
+    .register-input{
+        width: 80%;
+    }
+    .register-container,
+    .closure-table  {
+        padding: 2rem 1rem;
+    }
+    .forms-report {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        align-items: center;
+        row-gap: 30px;
+    }
+    .payment-report-forms {
+        padding: 4rem 1rem;
+    }
+    .payment-report-table {
+        padding: 4rem 1rem;
+    }
 }
 
 
 
 @media only screen and (max-width: 540px) {
+
+    .giftcard-form .form-container,
+    .register-input{
+        width: 100%;
+    }
+
     .giftcard-form .form-container{
         width: 100%;
     }
@@ -424,6 +450,10 @@
     .column h3 {
         font-size: 0.6rem;
     }
+
+    table.GeneratedTable {
+        font-size: 0.6rem;
+    }
 }
 
 
@@ -431,15 +461,18 @@
 @media only screen and (max-width: 414px) {
     .user-table-head,
     .user-table-row{
-    display: grid;
-    grid-template-columns: repeat(3,1fr) repeat(3,2fr) repeat(2,1fr);
-    column-gap: 10px;
-    align-items: center;
-}
+        display: grid;
+        grid-template-columns: repeat(3,1fr) repeat(3,2fr) repeat(2,1fr);
+        column-gap: 10px;
+        align-items: center;
+    }
 
-.user-table-row p {
-    font-size: .5rem;
-}
+    .user-table-row p {
+        font-size: .5rem;
+    }
+    table.GeneratedTable {
+        font-size: 0.4rem;
+    }
 
 }
 

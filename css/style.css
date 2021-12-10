@@ -21,7 +21,7 @@ body,html {
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    text-align: center;
+    text-align: left !important;
 }
 
 .cwhite {
@@ -2440,7 +2440,7 @@ table.customTable {
 
 .giftcard-form .form-container{
     display: grid;
-    width: 70%;
+    width: 40%;
     overflow: hidden;
 }
 
@@ -2459,13 +2459,227 @@ table.customTable {
 }
 
 .register-container {
-    display: flex;
-    background: var(--whitesmoke);
-    
-
-
-
+    padding: 4rem;
+    background: var(--white);
 }
+
+.update-button {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.register-input {
+    width: 40%
+}
+
+.closure-table .row,
+.closure-body .row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) repeat(6,0.8fr);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--whitesmoke);
+}
+
+.closure-table {
+    background-color: whitesmoke;
+    padding: 2rem 4rem 
+}
+
+.closure-head h3 {
+    color: var(--crimson);
+}
+
+.smoke {
+    background: whitesmoke;
+}
+
+.payment-report-forms {
+    background: var(--white);
+}
+
+.forms-report {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+}
+
+.bw {
+    background: var(--white);
+}
+
+.payment-report-forms {
+    padding: 4rem
+}
+
+.payment-head-title {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    text-align: center !important;
+    background: var(--white);
+    padding: 5px 0
+}
+
+.payment-head {
+    display: grid;
+    grid-template-columns: 1fr repeat(7,0.8fr);
+}
+
+.payment-report-table {
+    padding: 4rem
+}
+.payment-head-title .row-1{
+    border-right: 1px solid red;
+}
+
+.payment-report-table .table-head{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.report-1-head,
+.report-1-body{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 15px;
+    padding: 10px 0
+}
+
+.report-1-body {
+    font-size: 0.8rem;
+}
+
+.report-1-head-title h3 {
+    text-align: center;
+}
+
+.report-2-head {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px 0
+}
+
+.report-2-head-title {
+    text-align: center;
+}
+
+.payment-report-table .report-2 {
+    padding-left: 8px;
+}
+
+.report-1-head,
+.report-2-head {
+    color: var(--crimson)
+}
+
+table.GeneratedTable {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    border-width: 2px;
+    /* border-color: #fc3c02; */
+    border-style: solid;
+    color: var(--lightblue);
+    text-align: center;
+    font-size: 0.8rem;
+}
+  
+table.GeneratedTable td, table.GeneratedTable th {
+    /* border-width: 2px; */
+    /* border-color: var(--lightblue); */
+    /* border-style: solid; */
+    padding: 3px;
+}
+
+table.GeneratedTable-2 td, table.GeneratedTable-2 th {
+    border-width: 2px; 
+    border-color: var(--lightblue);
+    border-style: solid;
+    padding: 3px;
+}
+  
+table.GeneratedTable thead {
+    background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

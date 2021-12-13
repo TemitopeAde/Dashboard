@@ -27,10 +27,19 @@
         padding: 6rem 3.5rem;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .row {
+        font-size: 0.76rem;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
+
+    .report-cap {
+        padding: 2rem 1rem;
+    }
+
     .toggle {
         display: block;
     }
@@ -193,7 +202,7 @@
 
     .sales-form .first-form, .sales-form .hidden-form {
         display: block;
-        padding: 0 2rem;
+        /* padding: 0 1rem; */
     }
 
     .input {
@@ -256,10 +265,7 @@
         display: block;
         padding: 2rem 1.55rem
     }
-    .store-setup .grid-1,
-    .store-setup .grid-2{
-        
-    }
+    
     .address .grid-2 {
         margin-top: 3rem;
     }
@@ -301,9 +307,9 @@
         margin-bottom: 35px;
     }
 
-    .table-wrap-token {
+    /* .table-wrap-token {
         padding: 1rem;
-    }
+    } */
 
     .table-wrap-token h3 {
         font-size: 0.6rem;
@@ -318,13 +324,18 @@
         padding: 1.3rem;
     }
 
+    .customer-form {
+        padding: 2.5rem 1rem;
+     }
+
     .workflow form {
         display: block;
         padding: 1rem;
         line-height: 40px;
     }
-    .workflow-table{
-        padding: 1.5rem 1rem;
+    
+    .workflow-table .row {
+        padding: 12px 1rem;
     }
 
     .payment-table {
@@ -332,7 +343,7 @@
     }
 
     .store-report {
-        padding: 30px 1.2rem
+        padding: 30px 1rem
     }
     .report-show {
         padding: 1rem
@@ -351,7 +362,7 @@
         column-gap: 15px;
     }
     .tax-report-table {
-        padding: 1.5rem 1rem;
+        /* padding: 1.5rem 1rem; */
     }
 
     .giftcard-form {
@@ -377,6 +388,40 @@
     }
     .payment-report-table {
         padding: 4rem 1rem;
+    }
+    .pw {
+        padding: 4rem 1rem;
+    }
+    .submit-report-tax {
+        margin: 35px 0;
+        padding: 0 1rem;
+    }
+
+    .row {
+        padding: 1.5rem 1rem;
+        font-size: .68rem;
+    }
+
+    .report-body .row, .report-head .row {
+        padding: 15px 1rem;
+    }
+
+    .tax-report-table .row {
+        padding: 1.5rem 1rem;
+    }
+    .report-show {
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 25px;
+    }
+    .closure-table .row,
+    .closure-body .row{
+        padding: 15px 1rem;
+    }
+    .users-container form {
+        padding: 3rem 1rem;
+    }
+    .table-wrap-token .row {
+        padding: 15px 1rem;
     }
 }
 
@@ -454,11 +499,30 @@
     table.GeneratedTable {
         font-size: 0.6rem;
     }
+    .tab .center a {
+        margin-right: 15px;
+        padding-bottom: 9px;
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
+    button {
+        width: 150px;
+    }
+
 }
 
 
 
 @media only screen and (max-width: 414px) {
+    
+    body {
+        font-size: 11px;
+    }
+
+    .tab .center a {
+        font-size: 0.4rem;
+    }
+
     .user-table-head,
     .user-table-row{
         display: grid;
@@ -493,6 +557,13 @@
 
     .user-table-body p {
         font-size: .45rem;
+    }
+
+    body {
+        font-size: 9px;
+    }
+    .container h3 {
+        font-size: 0.5rem;
     }
 }
 

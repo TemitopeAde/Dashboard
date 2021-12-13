@@ -54,9 +54,7 @@ p {
 }
 
 .shadow  {
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px grey;
 }
 
 /* HEADER */
@@ -741,16 +739,14 @@ to {opacity: 1}
 
 #catalog-main .add-hero {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
     align-items: center;
-    padding: 2rem;
-    text-align: center;
-
 }
 
-.section-one .add-hero h3 {
-    margin-right: 30px;
-    flex-basis: 60%;
+.users-container {
+    padding: 3rem 0;
+    background: var(--white);
 }
 
 
@@ -924,7 +920,7 @@ to {opacity: 1}
 }
 
 .section-four-box {
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     padding-bottom: 3rem;
 }
 
@@ -957,14 +953,6 @@ to {opacity: 1}
 .table td {
     font-size: .7rem;
 }
-
-.import-button {
-    display: flex;
-    column-gap: 12px;
-    flex-basis: 50%;
-}
-
-
 
 /* PROMOTIONS */
 
@@ -1034,7 +1022,7 @@ to {opacity: 1}
     border-top: none;
     text-align: center;
     padding-top: 3rem;
-    background-color: var(--lightblue);
+    /* background-color: var(--lightblue); */
     padding-bottom: 4rem;
 }
 
@@ -1058,8 +1046,11 @@ h2.products {
 }
 
 
-
-
+.user-table-body,
+.user-head p a{
+    color: var(--lightblue);
+    font-weight: bolder;
+}
 
 
 /* PRICE BOOKS */
@@ -1711,8 +1702,16 @@ table.customTable {
     padding: 20px
 }
 
+.introduction {
+    padding: 0 3rem
+}
+
 .active {
     display: none;
+}
+
+.container h3 {
+    color: var(--crimson)
 }
 
 .serial-container
@@ -1733,13 +1732,30 @@ table.customTable {
     margin-bottom: 30px;
  }
 
+ .add-hero h3 {
+     text-transform: inherit;
+ }
+
+ .import-button {
+     
+ }
+
  .customer-form {
-    padding: 2.5rem 0
+    padding: 2.5rem 4rem;
  }
 
  .customer-form-hide {
      transition: .8s;
      margin-bottom: 4rem
+ }
+
+ .export-list {
+     margin: 50px 0
+ }
+
+ .customer-row .column h5,
+ .customer-row .column small{
+     color: var(--lightblue);
  }
 
 .customer-hide {
@@ -1997,8 +2013,9 @@ table.customTable {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 25px;
-    padding: 3rem
+    padding: 3rem 4rem;
 }
+
 
 .user-table-head,
 .user-table-row{
@@ -2009,9 +2026,15 @@ table.customTable {
 }
 
 .user-table-head {
-    margin-bottom: 30px;
-    border-bottom: 1px solid grey;
     padding-bottom: 25px;
+}
+
+.user-table-row {
+    border-bottom: 1px solid var(--whitesmoke);
+}
+
+.user-table-row:last-child {
+    border-bottom: none;
 }
 
 .user-table-head h3 {
@@ -2021,8 +2044,8 @@ table.customTable {
 .user-table-container {
     color: var(--white);
     text-align: left;
-    padding: 0 3rem;
-    /* overflow: scroll; */
+    padding: 3rem 3rem;
+    border: 1px solid var(--whitesmoke);
 }
 .user-table-container a{
     color: var(--white);
@@ -2154,8 +2177,13 @@ table.customTable {
 .table-wrap-token {
     text-align: left;
     padding: 4rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
+.table-wrap-token .row{
+    padding: 15px 4rem
+}
 
 .enable-switch {
     display: grid;
@@ -2175,6 +2203,8 @@ table.customTable {
 
 .workflow-table{
     padding: 3rem;
+    padding-left: 0;
+    padding-right: 0;
     text-align: left;
 }
 
@@ -2186,8 +2216,7 @@ table.customTable {
     display: grid;
     grid-template-columns: repeat(2,1.5fr) repeat(2,1fr);
     column-gap: 20px;
-    padding: 12px;
-    border-bottom: 1px solid var(--white);
+    padding: 12px 4rem;
     transition: .7s;
 }
 
@@ -2336,7 +2365,9 @@ table.customTable {
 
 .store-report {
     text-align: left;
-    padding: 30px 4rem
+    padding: 30px 4rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .report-cap-item {
@@ -2344,6 +2375,7 @@ table.customTable {
     align-items: center;
     column-gap: 200px;
     margin-bottom: 25px;
+    color: var(--crimson);
 }
 
 .report-cap-item h4:nth-child(2) {
@@ -2354,28 +2386,46 @@ table.customTable {
     flex-basis: 30%;
 }
 
-.report-table .report-head,
+
+.report-body .row,
+.report-head .row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    padding: 15px 4rem;
+    border-bottom: 1px solid whitesmoke;
+}
+
+
+.report-head .row {
+    color: var(--crimson);
+    font-weight: bolder;
+}
+
+
+.report-cap {
+    padding: 2rem 4rem
+}
+
+/* .report-table .report-head,
 .report-table .report-body{
     display: grid;
     grid-template-columns: 1.5fr repeat(3,1fr);
     column-gap: 30px;
     border-bottom: 1px solid var(--whitesmoke);
 
-}
+} */
 
 .report-table .report-head {
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--whitesmoke);
-    padding-bottom: 20px;
+    /* margin-bottom: 30px; */
+    /* border-bottom: 1px solid var(--whitesmoke); */
+    /* padding-bottom: 20px; */
 }
 
 .report-table {
     padding: 2rem 0;
 }
 
-.report-body {
-    padding: 15px 0
-}
 
 .report-body h5 {
     font-weight: 500;
@@ -2383,7 +2433,7 @@ table.customTable {
 
 .report-show {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     column-gap: 30px;
     align-items: center;
     margin-bottom: 35px;
@@ -2403,7 +2453,8 @@ table.customTable {
     padding: 0 4rem;
 }
 
-.less {
+.less,
+.newbutton{
     outline: none;
     border: none;
     background: none;
@@ -2425,7 +2476,7 @@ table.customTable {
 }
 
 .tax-report-table {
-    padding: 1.5rem 4rem;
+    /* padding: 1.5rem 4rem; */
     background: whitesmoke;
     text-align: left;
 }
@@ -2470,20 +2521,20 @@ table.customTable {
 }
 
 .register-input {
-    width: 40%
+    width: 100%
 }
 
 .closure-table .row,
 .closure-body .row{
     display: grid;
     grid-template-columns: repeat(2,1fr) repeat(6,0.8fr);
-    padding: 15px 0;
+    padding: 15px 4rem;
     border-bottom: 1px solid var(--whitesmoke);
 }
 
 .closure-table {
     background-color: whitesmoke;
-    padding: 2rem 4rem 
+    padding: 2rem 0rem;
 }
 
 .closure-head h3 {
@@ -2596,32 +2647,132 @@ table.GeneratedTable-2 td, table.GeneratedTable-2 th {
     border-color: var(--lightblue);
     border-style: solid;
     padding: 3px;
+    border-bottom: none;
 }
   
 table.GeneratedTable thead {
     background-color: var(--white);
 }
 
+.table-button {
+    margin-bottom: 44px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.payment-report-hide {
+    padding-top: 40px;
+}
+
+.submit-paymnet-tax {
+    padding-top: 25px;
+}
+
+.report-toggle {
+    margin-top: 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.first-form-1 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    column-gap: 15px;
+}
+
+#button-toggles,
+#button-toggles-2,
+#button-toggles-3{
+    display: flex;
+    margin-top: 2rem;
+}
+
+#button-toggles button,
+#button-toggles-2 button,
+#button-toggles-3 button{
+    width: 200px;
+    height: 50px;
+}
+
+.but-1 {
+    display: flex;
+    column-gap: 30px;
+    justify-content: flex-end;
+}
+
+.tax-report-table .row {
+    padding: 1.5rem 4rem;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+}
+
+.pw {
+    padding: 4rem;
+}
 
 
+.bs {
+    background-color: whitesmoke;
+}
 
+.inventory-table {
+    margin: 3rem 0;
+    /* padding: 15px 30px; */
+    text-align: left;
+    border: 2px solid var(--whitesmoke);
+    padding-top: 40px;
+}
 
+.inventory-table-head .row,
+.inventory-table-body .row{
+    border-bottom: 1px solid var(--whitesmoke);
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 15px;
+    font-size: 0.8rem;
+}
 
+.inventory-table-head .row {
+    font-weight: bolder;
+}
 
+.inventory-buttons {
+    display: flex;
+    column-gap: 25px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
 
+.inventory-table-head .column-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
 
+.fa-plus-circle {
+    color: var(--crimson)
+}
 
+.inventory-table-body .row:nth-child(even) {
+    background-color: var(--white);
+}
 
+.row:nth-child(even) {
+    background-color: var(--white);
+}
 
-
-
-
-
-
-
-
-
-
+.row {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
 
 
 

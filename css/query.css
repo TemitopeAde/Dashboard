@@ -139,7 +139,8 @@
     }
 
     #catalog-main .content-box .section-three {
-        padding: 2rem 3rem
+        padding: 5rem 3rem;
+        padding-bottom: 7rem;
     }
 
     .section-two-box .container {
@@ -197,7 +198,7 @@
     }
 
     .openclosecontent {
-        padding: 0 3rem;
+        padding: 3rem 3rem;
     }
 
     .sales-form .first-form, .sales-form .hidden-form {
@@ -324,6 +325,20 @@
         padding: 1.3rem;
     }
 
+    .table-body.row {
+        padding: 15px 1rem;
+    }
+
+    .section-four-wrapper {
+        padding: 0 1rem
+    }
+    
+    .customer-form-show {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        margin-bottom: 30px;
+    }
+
     .customer-form {
         padding: 2.5rem 1rem;
      }
@@ -423,6 +438,13 @@
     .table-wrap-token .row {
         padding: 15px 1rem;
     }
+    .section-two .section-two-box {
+        display: block;
+        padding: 2rem 1rem;
+    }
+    #catalog-main .content-box .section-three {
+        padding: 5rem 1rem;
+    }
 }
 
 
@@ -509,6 +531,10 @@
         width: 150px;
     }
 
+    .inventory-table-body .column,
+    .inventory-table-head .column{
+        font-size: 0.6rem;
+    }
 }
 
 
@@ -567,7 +593,16 @@
     }
 }
 
-
+@media only screen and (max-width: 320px) {
+    button {
+        width: 100px;
+    }
+    .inventory-table-body .column,
+    .inventory-table-head .column{
+        font-size: 0.3rem;
+    }
+}
+    
 
 
 

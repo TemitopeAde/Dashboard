@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="step-form flex-center">
+    <div class="container">    
+        <form id="form1">
+            <h2>Where is your outlet?</h2>
+            <p>Enter your stores physical address so Vend can help create the right settings for this outlet.</p>
+            <div class="input">
+                <label for="street">Street Address</label>
+                <input type="text" id="street" placeholder="Enter a street">
+            </div>
+            <div class="input">
+                <label for="timezone">Time Zone</label>
+                <select name="" id="timezone">
+                    <option value="">(GMT+01:00) Africa/Lagos</option>
+                </select>
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="button2" id="next1">Next</button>
+            </div>
+           
+        </form>
+        <form id="form2">
+            <h2>Where is your outlet?</h2>
+            <p>Outlet names are used in important places such as inventory orders, reporting, and sales history. It helps to have a meaningful name, like a description of its location, so others can easily and quickly recognize it.</p>
+            <div class="input">
+                <label for="street">Outlet Name</label>
+                <input type="text" id="street" placeholder="Outlet Name">
+            </div>
+
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                Ibadan road
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" id="back1">Back</button>
+                <button type="button" class="button2" id="next2">Next</button>
+            </div>
+
+            
+            
+        </form>
+        <form id="form3">
+            <h2>Assign a sales tax to the "Main Outlet" outlet.</h2>
+            <p>The default sales tax will be applied to products sold at this outlet. For products that require different tax rates, you can create separate tax rates later on and apply them when editing a product.</p>
+            <div class="input">
+                <label for="d-sales-tax">Default Sales Tax</label>
+                <select name="" id="d-sales-tax">
+                    <option value="">No tax</option>
+                </select>
+            </div>
+
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                Ibadan road
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" id="back2">Back</button>
+                <button type="button" class="button2" id="next3">Next</button>
+            </div>
+
+            
+            
+        </form>
+        <form id="form4">
+            <h2>What registers does the "Main Outlet" outlet need?</h2>
+            <p>If you have different departments, payment counters or POS machines in this outlet,
+                 it’s important to set up registers for each of them so you can accurately report
+                  on staff activities, sales performance, payments and more. 
+                  If you have an integrated ecommerce store you should also create a register for that.
+            </p>
+            <div class="input">
+                <label for="street">Registers</label>
+                <input type="text" id="street" placeholder="Main Register">
+            </div>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                Ibadan road
+            </div>
+            <div>
+                <button type="button" class="button3">
+                    <a href="#">Add another Register</a>
+                </button>
+            </div>
+            <div class="form-buttons">
+                <button type="button" id="back3">Back</button>
+                <button type="submit" class="button2">Save Outlet</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col">Step 1</div>
+            <div class="step-col">Step 2</div>
+            <div class="step-col">Step 3</div>
+            <div class="step-col">Step 4</div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var pro = document.getElementById('progress')
+        var form1 = document.querySelector("#form1");
+        var form2 = document.querySelector("#form2");
+        var form3 = document.querySelector('#form3');
+        var form4 = document.querySelector('#form4');
+
+        var next1 = document.getElementById('next1');
+        var next2 = document.getElementById('next2');
+        var next3 = document.getElementById('next3');
+
+        var back1 = document.getElementById('back1');
+        var back2 = document.getElementById('back2');
+        var back3 = document.getElementById('back3');
+
+        next1.addEventListener('click', function() {
+            form1.style.left = '850px';
+            form2.style.left = '30px';
+            pro.style.width = '400px';
+        });
+        next2.addEventListener('click', function() {
+            form3.style.left = '30px';
+            form2.style.left = '850px';
+            pro.style.width = '600px';
+        });
+
+        back1.addEventListener('click', function() {
+            form1.style.left = "30px";
+            form2.style.left = '850px';
+            pro.style.width = '200px';
+        });
+        next3.addEventListener('click', function() {
+            form4.style.left = '30px';
+            form3.style.left = '850px';
+            pro.style.width = '800px';
+        });
+        back2.addEventListener('click', function() {
+            form3.style.left = '850px';
+            form2.style.left = '30px';
+            pro.style.width = '400px';
+        });
+        back3.addEventListener('click', function() {
+            form4.style.left = '850px';
+            form3.style.left = '30px';
+            pro.style.width = '600px';
+        })
+    </script>
+
+
+
+</body>
+</html>

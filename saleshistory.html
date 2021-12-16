@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/query.css">
 </head>
-<body class="body">
+<body class="bs">
 
         <!-- HEADER START -->
         <header class="shadow">
@@ -180,7 +180,7 @@
                     </div>
                 </div>
     
-                <h2 class="products" style="margin-top: 60px;">Promotions</h2>
+                <h2 class="products" style="margin-top: 60px; color: var(--lightblue);">Promotions</h2>
 
                 <div class="content">
                     <div class="content-box">
@@ -233,7 +233,7 @@
                                         </div>
                                         
 
-                                        <div class="hidden toggleform">
+                                        <div class="hidden-form-3 active">
                                             <div class="hidden-form">
                                                 <div class="outlet item">
                                                     <label for="outlet">Outlet</label>
@@ -256,10 +256,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="toggle-button">
-                                            More Filters
-                                        </button>
-                                        <button type="submit" class="button">Search</button>
+                                        
+
+                                        <div class="sales-button-container">
+                                            <button type="submit" class="button">Search</button>
+                                            <button class="toggle-button-3">
+                                                More Filters
+                                            </button>
+                                            <span id="sales-button-container-3"></span>
+                                        </div>
+                                       
                                     </form>
                                 </div>
                             </div>
@@ -288,7 +294,7 @@
                                         </div>
                                         
 
-                                        <div class="hidden toggleform">
+                                        <div class="sales-hidden-2 active">
                                             <div class="hidden-form">
                                                 <div class="outlet item">
                                                     <label for="outlet">Outlet</label>
@@ -311,10 +317,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="toggle-button">
-                                            More Filters
-                                        </button>
-                                        <button type="submit" class="button">Search</button>
+                                        
+
+                                        <div class="sales-button-container">
+                                            <button type="submit" class="button">Search</button>
+                                            <button class="toggle-button-2">
+                                                More Filters
+                                            </button>
+                                            <span id="sales-button-container-2"></span>
+                                        </div>
+                                        
                                     </form>
                                 </div>
                             </div>
@@ -342,27 +354,39 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="hidden-form">
-                                            <div class="outlet item">
-                                                <label for="outlet">Outlet</label>
-                                                <select class="input" id="outlet">
-                                                    <option value="">All</option>
-                                                    <option value="">Main Outlet</option>
-                                           </select>
-                                            </div>
-                                            <div class="user item">
-                                                <label for="user">User</label>
-                                                <select class="input" id="user">
-                                                    <option value="">All</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="datepicker item">
-                                                <label for="date">Date Range</label>
-                                                <input type="text" name="datefilter" value="" class="input"/>
+                                        <div class="sales-hidden active">
+                                            <div class="hidden-form">
+                                                <div class="outlet item">
+                                                    <label for="outlet">Outlet</label>
+                                                    <select class="input" id="outlet">
+                                                        <option value="">All</option>
+                                                        <option value="">Main Outlet</option>
+                                               </select>
+                                                </div>
+                                                <div class="user item">
+                                                    <label for="user">User</label>
+                                                    <select class="input" id="user">
+                                                        <option value="">All</option>
+                                                    </select>
+                                                </div>
+    
+                                                <div class="datepicker item">
+                                                    <label for="date">Date Range</label>
+                                                    <input type="text" name="datefilter" value="" class="input"/>
+                                                </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="button">Search</button>
+                                        
+
+
+                                        <div class="sales-button-container">
+                                            <button type="submit" class="button">Search</button>
+                                            <button class="toggle-button">
+                                                More Filters
+                                            </button>
+                                            <span id="sales-button-container"></span>
+                                        </div>
+                                        
                                     </form>
                                 </div>
                             </div>
@@ -377,7 +401,76 @@
             </div>
         </div>
     
-    
+    <script>
+        var btn = document.querySelector('.toggle-button');
+        var container = document.querySelector('.sales-hidden');
+        var btnC = document.querySelector('#sales-button-container');
+
+        var btn2 = document.querySelector('.toggle-button-2');
+        var container2 = document.querySelector('.sales-hidden-2 ');
+        var btnC2 = document.querySelector('#sales-button-container-2');
+
+        var btn3 = document.querySelector('.toggle-button-3');
+        var container3 = document.querySelector('.hidden-form-3');
+        var btnC3 = document.querySelector('#sales-button-container-3');
+
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            container.classList.remove('active');
+            btn.classList.add('active');
+            var newBtn = document.createElement('button');
+            newBtn.innerHTML = 'Less Filter';
+            newBtn.classList.add('newbutton');
+            btnC.appendChild(newBtn);
+        });
+
+        btnC.addEventListener('click', function(e) {
+            e.preventDefault();
+            container.classList.add('active');
+            btnC.classList.add('active');
+            btn.classList.remove('active');
+        });
+
+
+        btn2.addEventListener('click', function(e) {
+            e.preventDefault();
+            container2.classList.remove('active');
+            btn2.classList.add('active');
+            var newBtn2 = document.createElement('button');
+            newBtn2.innerHTML = 'Less Filter';
+            newBtn2.classList.add('newbutton');
+            btnC2.appendChild(newBtn2);
+        });
+
+        btnC2.addEventListener('click', function(e) {
+            e.preventDefault();
+            container2.classList.add('active');
+            btnC2.classList.add('active');
+            btn2.classList.remove('active');
+        });
+
+
+
+        btn3.addEventListener('click', function(e) {
+            e.preventDefault();
+            container3.classList.remove('active');
+            btn3.classList.add('active');
+            var newBtn3 = document.createElement('button');
+            newBtn3.innerHTML = 'Less Filter';
+            newBtn3.classList.add('newbutton');
+            btnC3.appendChild(newBtn3);
+        });
+
+        btnC3.addEventListener('click', function(e) {
+            e.preventDefault();
+            container3.classList.add('active');
+            btnC3.classList.add('active');
+            btn3.classList.remove('active');
+        });
+
+
+
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>

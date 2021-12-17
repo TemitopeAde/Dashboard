@@ -445,6 +445,10 @@
     #catalog-main .content-box .section-three {
         padding: 5rem 1rem;
     }
+    .add-sections {
+        column-gap: 20px;
+        padding: 3rem 1rem;
+    }
 }
 
 

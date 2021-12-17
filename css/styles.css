@@ -297,15 +297,30 @@ select {
     font-size: 0.85rem;
 }
 
+.remove-cash-box .submit {
+    float: right;
+    margin: 2rem 0
+}
 
+.remove-cash-box .form {
+    margin: 20px 0
+}
 
+.reset-box {
+    position: absolute;
+    left: 25px
+}
 
+.reset-box ul {
+    margin-left: 60px;
+    margin-bottom: 28px;
+}
 
-
-
-
-
-
+.reset-box .submit {
+    margin: 30px 0;
+    float: right;
+    margin-right: 20px;
+}
 
 
 

@@ -2877,14 +2877,32 @@ button {
     padding-right: 3rem;
 }
 
+.add-sections {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    column-gap: 50px;
+    padding: 3rem;
+    border-bottom: 1px solid var(--whitesmoke);
+    /* align-items: center; */
+}
 
+.add-sections input[type="text"] {
+    padding-left: 9px;
+}
 
+.add-sections .form {
+    padding: 1rem 0;
+    padding-top: 0;
+}
 
+.section-content label {
+    font-size: .86rem;
+    font-weight: bolder;
+}
 
-
-
-
-
+.add-sections-box {
+    padding-bottom: 3rem;
+}
 
 
 

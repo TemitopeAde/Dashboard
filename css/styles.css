@@ -81,7 +81,7 @@ div .button3 {
     color: var(--white);
 }
 
-input,
+input[type="text"],
 select{
     width: 100%;
     outline: none;
@@ -90,7 +90,6 @@ select{
     font-weight: 400;
     font-size: 15px;
     word-break: normal;
-    width: 100%;
     margin: 0;
     padding: 12px;
     padding-left: 10px;
@@ -151,23 +150,32 @@ label {
     justify-content: center;
 }
 
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 5%;
+}
+
 .step-form {
     height: 100vh;
     background: rgba(0,0,0, .4);
+
 }
 
 .container {
     width: 800px;
-    height: 60vh;
+    height: 550px;
     background: var(--white);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 -1px 5px -1px #000;
 }
 
 .container form {
     position: absolute;
     left: 30px;
-    top: 60px;
+    top: 80px;
     right: 30px;
     bottom: 30px;
     width: 700px;
@@ -192,30 +200,33 @@ select {
 }
 
 .step-row {
-    width: 800px;
     height: 40px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     box-shadow: 0 -1px 5px -1px #000;
     position: relative;
+    justify-content: space-around;
 }
 
 
-
-#progress {
-    position: absolute;
-    height: 100%;
-    width: calc(800px / 4);
-    background: var(--lightblue);
-    transition: .8s;
-}
 
 .step-col {
     text-align: center;
-    color: var(--white);
+    color: var(--lightblue);
     position: relative;
     width: calc(100% / 4);
+    border-right: 2px solid var(--lightblue);
+}
+
+.step-col:last-of-type {
+    border-right: none;
+}
+
+.step-color {
+    color: var(--crimson);
+    transition: 0.8s;
+    font-weight: bolder;
 }
 
 #form2 {
@@ -229,3 +240,79 @@ select {
 #form4 {
     left: 850px;
 }
+
+.dropdown {
+    position: relative;
+    width: 300px
+}
+
+.dropdown .options {
+    position: absolute;
+    top: 60px;
+    background-color: var(--white);
+    width: 100%;
+    line-height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 -1px 5px -1px #000;
+    display: none;
+}
+
+.dropdown.active .options {
+    display: block;
+}
+
+.options div {
+    border-bottom: 1px solid whitesmoke;
+    transition: 0.8s;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.options div:hover {
+    background-color: #62b;
+    padding: 5px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.options div:last-of-type {
+    border: none;
+}
+
+.tax-container {
+    height: 75vh;
+    box-shadow: 0 -1px 5px -1px #000;
+}
+
+.tax-container form {
+    top: 50px
+}
+
+.threshold.active {
+    display: none;
+}
+
+.location {
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

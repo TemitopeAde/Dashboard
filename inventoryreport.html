@@ -282,8 +282,19 @@
                                 <div class="inventory-table bs">
 
                                     <div class="inventory-buttons">
-                                        <div class="button-1">
-                                            <button type="button" class="danger-button">Format Result</button>
+                                        <div class="button-1" style="position: relative;">
+                                            <button type="button" class="danger-button" id="format">Format Result</button>
+                                            <div class="format-container actives">
+                                                <form>
+                                                    <h6>Arrange Rows</h6>
+                                                    <input type="radio" name="format" id="formatOne">
+                                                    <label for="formatOne">Show Totals Only</label>
+                                                    <br>
+                                                    <input type="radio" name="format" id="formatTwo">
+                                                    <label for="formatTwo">By Outlet</label>
+                                                    <button type="submit" style="cursor: pointer;">Apply</button>
+                                                </form>
+                                            </div>
                                         </div>
                                         <div class="ibutton2">
                                             <button type="button" class="cancel-button">Export Report</button>
@@ -292,12 +303,38 @@
 
                                     <div class="inventory-table-head">
                                         <div class="row" style="color: var(--crimson);">
-                                            <div class="column column-flex">
+                                            <div class="column column-flex" style="position: relative;">
                                                 <div>Product</div>
                                                 <div>
                                                     <a href="#">
                                                         <i class="fas fa-plus-circle"></i>
                                                     </a>
+                                                </div>
+                                                <div class="plus-content" style="display: none;">
+                                                    <div class="check-container">
+                                                        <input type="checkbox">
+                                                        <div>All</div>
+                                                    </div>
+                                                    <div class="check-container" id="checkCont">
+                                                        <input type="checkbox" id="checkOne">
+                                                        <div>Supplier code</div>
+                                                    </div>
+                                                    <div class="check-container" id="checkContTwo">
+                                                        <input type="checkbox" id="checkTwo">
+                                                        <div>Brand</div>
+                                                    </div>
+                                                    <div class="check-container" id="checkContThree">
+                                                        <input type="checkbox" id="checkThree">
+                                                        <div>Tag</div>
+                                                    </div>
+                                                    <div class="check-container" id="checkContFour">
+                                                        <input type="checkbox" id="checkOne">
+                                                        <div>Supplier code</div>
+                                                    </div>
+                                                    <div class="check-container" id="checkContFive">
+                                                        <input type="checkbox" id="checkOne">
+                                                        <div>Supplier</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="column">Closing Inventory</div>
@@ -416,6 +453,88 @@
                                         </div>
                                     </form>
                                 </div>
+                                <div class="inventory-table bs">
+
+                                    <div class="inventory-buttons">
+                                        <div class="button-1" style="position: relative;">
+                                            <button type="button" class="danger-button" id="formatTwos">Format Result</button>
+                                            <div class="format-containerTwo actives">
+                                                <form>
+                                                    <h6>Arrange Rows</h6>
+                                                    <input type="radio" name="format" id="formatOne">
+                                                    <label for="formatOne">Show Totals Only</label>
+                                                    <br>
+                                                    <input type="radio" name="format" id="formatTwo">
+                                                    <label for="formatTwo">By Outlet</label>
+
+                                                    <button type="submit" style="cursor: pointer;">Apply</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="ibutton2">
+                                            <button type="button" class="cancel-button">Export Report</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inventory-table-head-2">
+                                        <div class="row" style="color: var(--crimson);">
+                                            <div class="column column-flex">
+                                                <div>SKU Name</div>
+                                                <div>
+                                                    <a href="#">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="column">Closing Inventory</div>
+                                            <div class="column">Items Sold</div>
+                                            <div class="column">Items Sold per Day</div>
+                                            <div class="column">Days Cover</div>
+                                            <div class="column column-flex">
+                                                <div>Avg. Cost</div>
+                                                <div>
+                                                    <a href="#">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inventory-table-body-2">
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">500</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">500</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">500</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">500</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div id="all" class="tabcontent bw">
@@ -487,6 +606,114 @@
                                             <span id="button-toggle-3"></span>
                                         </div>
                                     </form>
+                                </div>
+                                <div class="inventory-table bs">
+
+                                    <div class="inventory-buttons">
+                                        <div class="button-1" style="position: relative;">
+                                            <button type="button" class="danger-button" id="formatThree">Format Result</button>
+                                            <div class="format-containerThree actives">
+                                                <form>
+                                                    <h6>Arrange Rows</h6>
+                                                    <input type="radio" name="format" id="formatOne">
+                                                    <label for="formatOne">Show Totals Only</label>
+                                                    <br>
+                                                    <input type="radio" name="format" id="formatTwo">
+                                                    <label for="formatTwo">By Outlet</label>
+
+                                                    <button type="submit" style="cursor: pointer;">Apply</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="ibutton2">
+                                            <button type="button" class="cancel-button">Export Report</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inventory-table-head-3">
+                                        <div class="row" style="color: var(--crimson);">
+                                            <div class="column column-flex">
+                                                <div>Product</div>
+                                                <div>
+                                                    <a href="#">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="column">Closing Inventory</div>
+                                            <div class="column">Item Sold</div>
+                                            <div class="column">Items Sold per Day</div>
+                                            <div class="column">Sell-through Rate</div>
+                                            <div class="column">Days Cover</div>
+                                            <div class="column">Revenue</div>
+                                            <div class="column">Gross Profit</div>
+                                            <div class="column">Margin</div>
+                                            <div class="column">Inventory</div>
+                                            <div class="column column-flex">
+                                                <div>Retail Value (Excl Tax)</div>
+                                                <div>
+                                                    <a href="#">
+                                                        <i class="fas fa-plus-circle"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inventory-table-body-3">
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="column">Test</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                            <div class="column">200</div>
+                                            <div class="column">500</div>
+                                            <div class="column">4000</div>
+                                            <div class="column">400</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         
@@ -597,6 +824,41 @@
     <script>
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
+    </script>
+    <script type="text/javascript">
+        var cont = document.querySelector('.format-container');
+        var btn = document.querySelector('#format');
+
+        var contTwo = document.querySelector('.format-containerTwo');
+        var btnTwo = document.querySelector('#formatTwos');
+
+        var contThree = document.querySelector('.format-containerThree');
+        var btnThree = document.querySelector('#formatThree');
+
+        console.log(contThree,btnThree)
+
+        btn.addEventListener('click', function() {
+            cont.classList.toggle('actives');
+        });
+
+        btnTwo.addEventListener('click', function() {
+            contTwo.classList.toggle('actives');
+        });
+
+        btnThree.addEventListener('click', function() {
+            console.log('success IS MINE')
+            contThree.classList.toggle('actives');
+        });
+    </script>
+    <script type="text/javascript">
+        var cheCont = document.querySelector('#checkCont');
+        var cheBox = document.querySelector('#checkOne');
+
+        // cheCont.addEventListener('click', function () {
+        //     cheBox.checked = true;
+        // })
+
+        // document.querySelectorAll('input[type="checkbox"]').forEach(e => e.checked ^= 1);
     </script>
 </body>
 </html>

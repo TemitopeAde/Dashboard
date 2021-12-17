@@ -449,6 +449,9 @@
         column-gap: 20px;
         padding: 3rem 1rem;
     }
+    .pay-table-head{
+        margin-left: 1rem;
+    }
 }
 
 

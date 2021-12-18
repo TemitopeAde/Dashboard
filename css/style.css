@@ -47,6 +47,7 @@ li, ul {
 
 ::placeholder {
     font-family: 'Raleway', sans-serif;
+    color: var(--lightblue);
 }
 
 p {
@@ -503,7 +504,7 @@ to {opacity: 1}
     transition: background-color 0.6s ease;
 }
   
-.active, .dot:hover {
+.dot:hover {
     background-color: var(--blue);
 }
 
@@ -1778,9 +1779,9 @@ table.customTable {
     padding: 0 3rem
 }
 
-.active {
+/* .active {
     display: none;
-}
+} */
 
 .container h3 {
     color: var(--crimson)
@@ -3130,8 +3131,117 @@ button {
     margin-bottom: 1.5rem;
 }
 
+.add-product-dropdown {
+    position: absolute;
+    left: 0;
+    background-color: var(--white);
+    /* padding: 1rem; */
+    width: 300px;
+    height: 250px;
+    display: none;
+    padding: 25px 0;
+}
+
+#add-new-brand-input {
+    margin-bottom: 13px;
+}
+.add-product-box {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 25px;
+    padding: 4rem;
+}
+
+.add-product-dropdown.active {
+    display: block;
+}
+
+.add-product-dropdown button {
+    height: 35px;
+    display: flex;
+    align-content: flex;
+    justify-content: center;
+}
+
+.add-item {
+    padding: 20px 0
+}
+
+.add-product-dropdown {
+    overflow-y: scroll;
+}
+
+.add-product-dropdown label,
+.add-product-form-item label,
+.add-item label{
+    margin-bottom: 9px;
+}
+
+.list-of-brands li:hover {
+    background-color: var(--crimson);
+    color: var(--white);
+    cursor: pointer;
+}
+
+span h5 {
+    text-transform: inherit;
+}
+
+.list-of-brands li {
+    transition: 0.8s;
+    /* padding: 8px; */
+    /* border-radius: 8px; */
+    font-size: .8rem;
+}
+
+.list-of-brands {
+    padding-top: 10px;
+}
 
 
+.list-of-brands.active {
+    display: block;
+}
+
+.add-product-description textarea {
+    height: 17vh;
+}
+
+.add-product-type {
+    position: relative;
+}
+
+.add-product-drop-down {
+    width: 300px;
+    background-color: var(--white);
+    height: 250px;
+    overflow-y: scroll;
+    display: none;
+}
+
+.add-product-drop-down.active {
+    display: block;
+}
+ 
+
+
+.add-product-dropdown form,
+.add-product-drop-down form{
+    padding: 25px;
+}
+
+
+.list-of-add-type li,
+.list-of-brands li{
+    padding: 12px 25px;
+    font-size: 0.85rem;
+    transition: 0.85s;
+}
+
+.list-of-add-type li:hover{
+    background-color: var(--crimson);
+    cursor: pointer;
+}
 
 
 

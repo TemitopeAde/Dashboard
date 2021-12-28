@@ -432,38 +432,71 @@
 
         browse.addEventListener('click', () => input.click());
 
-        input.addEventListener('change', () => {
-            let file = input.files;
-
-            for (let i =0; i < file.length; i++) {
-                files.push(file[i])
-            }
-
-            
-
-
-            const showImages = () => {
+        const showImages = () => {
                 let  images = '';
                 files.forEach ((e,i) => {
                     images += `<div class="image">
                                     <img src="${URL.createObjectURL(e)}" alt="images">
-                                    <span onclick="delImage(${i})">&times;</span>
+                                    <span onclick="deleteImage(${i})">&times;</span>
                                 </div>`
                 });
 
                 container.innerHTML = images;
-            } 
+        } 
 
-            const delImage = index => {
+        const deleteImage = index => {
                 files.splice(index, 1);
                 showImages();
+        }
+
+        input.addEventListener('change', () => {
+            let file = input.files;
+
+            for (let i =0; i < file.length; i++) {
+                // files.push(file[i])
+                if (files.every(e => e.name != file[i].name )) files.push(file[i])
             }
 
             form.reset();
             showImages();
-            
-            
         })
+
+
+        // DRAG AND DROP
+
+        form.addEventListener('dragover', e => {
+            e.preventDefault()
+            console.log(e)
+            form.classList.add('dragover')
+            text.innerHTML = 'Drop images here'
+        });
+
+        form.addEventListener('dragleave', e => {
+            e.preventDefault()
+            form.classList.remove('dragover');
+            text.innerHTML = 'Drag & drop image here or <span class="select">Browse</span>'
+        });
+
+        form.addEventListener('drop', e => {
+            e.preventDefault();
+            form.classList.remove('dragover')
+            text.innerHTML = text.innerHTML = 'Drag & drop image here or <span class="select">Browse</span>'
+            console.log(e.dataTransfer.files);
+            let file = e.dataTransfer.files;
+            for (let i =0; i < file.length; i++) {
+                if (files.every(e => e.name != file[i].name )) files.push(file[i])
+            }
+            
+            showImages();
+        })
+
+        button.addEventListener('click', () => {
+            let form = new FormData();
+            
+            files.forEach((e,i) => form.append(`file[${i}]`, e))
+            console.log(files)
+        })
+        
     </script>
 </body>
 </html>

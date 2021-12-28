@@ -359,8 +359,23 @@ select {
     box-shadow: 0 0 0 .2rem var(--blue);
 }
 
+.add-brand-container {
+    background-color: var(--white);
+    width: 800px;
+    height: 90vh;
+    padding: 40px;
+}
 
+button {
+    font-family: 'Poppins', sans-serif;
+}
 
+.add-product-type-container {
+    height: 50vh;
+    background-color: var(--white);
+    width: 800px;
+    padding: 40px;
+}
 
 
 

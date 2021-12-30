@@ -310,15 +310,15 @@
                                                                 <ul>
                                                                     <div>
                                                                         <li onclick="showItem('Brand 1')">Brand 1</li>
-                                                                        <button type="button"><button type="button"><i class="fas fa-trash-alt"></i></button></button>
+                                                                        <button type="button"><i class="fas fa-trash-alt"></i></button>
                                                                     </div>
                                                                    <div>
                                                                         <li onclick="showItem('Brand 2')">Brand 2</li>
-                                                                        <button type="button"><button type="button"><i class="fas fa-trash-alt"></i></button></button>
+                                                                        <button type="button"><i class="fas fa-trash-alt"></i></button>
                                                                    </div>
                                                                    <div>
                                                                         <li onclick="showItem('Brand 3')">Brand 3</li>
-                                                                        <button type="button"><button type="button"><i class="fas fa-trash-alt"></i></button></button>
+                                                                        <button type="button"><i class="fas fa-trash-alt"></i></button>
                                                                    </div>
                                                                 </ul>
                                                             </div>
@@ -407,111 +407,170 @@
                                                 </section>
                                                   
                                                 <div>
-                                                <div id="London" class="city">
-                                                    <div class="sku-container">
-                                                        <form style="position: relative;">
-                                                            <div class="sku-code-type" style="position: relative;">
-                                                                <label for="sku-type-code">SKU Code Type</label>
-                                                                <input type="text" class="input sku-input" placeholder="Custom" readonly>
-                                                                <div class="sku-dropdown">
-                                                                    <div class="list-of-sku-code">
-                                                                        <ul>
+
+                                                <!-- TAB CONTENTS -->
+                                                    <div id="London" class="city">
+                                                        <div class="sku-container">
+                                                            <form style="position: relative;">
+                                                                <div class="sku-code-type" style="position: relative;">
+                                                                    <label for="sku-type-code">SKU Code Type</label>
+                                                                    <input type="text" class="input sku-input" placeholder="Custom" readonly>
+                                                                    <div class="sku-dropdown">
+                                                                        <div class="list-of-sku-code">
+                                                                            <ul>
+                                                                                <div>
+                                                                                    <li onclick="showSku('Auto Generated')">Auto Generated</li>
+                                                                                    <button type="button"><i class="fas fa-trash-alt"></i></button>
+                                                                                </div>
                                                                             <div>
-                                                                                <li onclick="showSku('Auto Generated')">Auto Generated</li>
-                                                                                <button type="button"><i class="fas fa-trash-alt"></i></button>
+                                                                                    <li onclick="showSku('Custom')">Custom</li>
+                                                                                    <button type="button"><i class="fas fa-trash-alt"></i></button>
                                                                             </div>
-                                                                           <div>
-                                                                                <li onclick="showSku('Custom')">Custom</li>
-                                                                                <button type="button"><i class="fas fa-trash-alt"></i></button>
-                                                                           </div>
-                                                                           <div>
-                                                                                <li onclick="showSku('EAN')">EAN</li>
-                                                                                <button type="button"><i class="fas fa-trash-alt"></i></button>
-                                                                           </div>
-                                                                        </ul>
+                                                                            <div>
+                                                                                    <li onclick="showSku('EAN')">EAN</li>
+                                                                                    <button type="button"><i class="fas fa-trash-alt"></i></button>
+                                                                            </div>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <div class="sku-code">
+                                                                    <label for="sku-code-no">SKU Code</label>
+                                                                    <input type="text" placeholder="Enter SKU Code" class="input">
+                                                                </div>
+
+                                                                <div class="sku-add-button" style="position: absolute;">
+                                                                    <button type="button" class="cancel-button">Add New Code</button>
+                                                                </div>
+                                                            </form>
+                                                            
+                                                            <div class="sku-preview">
+                                                                <h3>Preview</h3>
+                                                                <div class="sku-preview-div">
+                                                                    <div class="sku-box-head">
+                                                                        <h5>Product Name</h5>
+                                                                        <input type="text" class="sku-input-hide input">
+                                                                        <h6>Please enter a SKU code so you can identify this product.</h6>
+                                                                    </div>
+                                                                    <div class="sku-box-body">
+                                                                        <small>The first SKU code will be shown to staff and customers to help identify this product. When you have multiple codes all the barcodes will be scannable</small>
                                                                     </div>
                                                                 </div>
-                                                                
-                                                            </div>
-                                                            <div class="sku-code">
-                                                                <label for="sku-code-no">SKU Code</label>
-                                                                <input type="text" placeholder="Enter SKU Code" class="input">
                                                             </div>
 
-                                                            <div class="sku-add-button" style="position: absolute;">
-                                                                <button type="button" class="cancel-button">Add New Code</button>
-                                                            </div>
-                                                        </form>
-                                                        
-                                                        <div class="sku-preview">
-                                                            <h3>Preview</h3>
-                                                            <div class="sku-preview-div">
-                                                                <div class="sku-box-head">
-                                                                    <h5>Product Name</h5>
-                                                                    <input type="text" class="sku-input-hide input">
-                                                                    <h6>Please enter a SKU code so you can identify this product.</h6>
-                                                                </div>
-                                                                <div class="sku-box-body">
-                                                                    <small>The first SKU code will be shown to staff and customers to help identify this product. When you have multiple codes all the barcodes will be scannable</small>
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
-
-                                                        
-                                                    </div>
-                                                    <div class="sku-form-item">
-                                                        <div class="sku-form-box">
-                                                            <div class="sku-supplier" style="position: relative;">
-                                                                <label for="sku-supplier">Supplier</label>
-                                                                <input type="text" class="input sku-supplier-input" placeholder="Supplier" readonly>
-                                                                <div class="sku-supplier-select" style="position: absolute;">
-                                                                    <form>
-                                                                        <label for="sku-add-new-supplier">Add a New Supplier</label>
-                                                                        <input type="text" class="input">
+                                                        <div class="sku-form-item">
+                                                            <div class="sku-form-box">
+                                                                <div class="sku-supplier" style="position: relative;">
+                                                                    <label for="sku-supplier">Supplier</label>
+                                                                    <input type="text" class="input sku-supplier-input" placeholder="Supplier" readonly>
+                                                                    <div class="sku-supplier-select" style="position: absolute;">
+                                                                        <form>
+                                                                            <label for="sku-add-new-supplier">Add a New Supplier</label>
+                                                                            <input type="text" class="input">
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="sku-supplier-code">
+                                                                    <label for="sku-supplier-code">Supplier Code</label>
+                                                                    <input type="text" class="input" placeholder="Enter Supplier Code">
+                                                                </div>
+                                                                <div class="sku-supplier-Price">
+                                                                    <label for="sku-supplier-Price">Supplier Price</label>
+                                                                    <input type="text" class="input" placeholder="Enter Supplier Price">
+                                                                </div>
+                                                            </div>
+                                                            <div class="sku-checkbox-form">
+                                                                <div class="items-label">
+                                                                    <form action="">
+                                                                        <input type="checkbox" id="sell-point" style="transform: scale(1.4);" class="checkB" onclick="checkMe()">
+                                                                        <div class="items-label">
+                                                                            <label for="sell-point" style="font-size: .92rem;">Track Inventory for this product</label>
+                                                                            <label for="sell-point">Manage orders, transfers and returns accurately, and get reports and insights on this product’s performance.</label>
+                                                                        </div>
                                                                     </form>
                                                                 </div>
                                                             </div>
-                                                            <div class="sku-supplier-code">
-                                                                <label for="sku-supplier-code">Supplier Code</label>
-                                                                <input type="text" class="input" placeholder="Enter Supplier Code">
-                                                            </div>
-                                                            <div class="sku-supplier-Price">
-                                                                <label for="sku-supplier-Price">Supplier Price</label>
-                                                                <input type="text" class="input" placeholder="Enter Supplier Price">
-                                                            </div>
-                                                        </div>
-                                                        <div class="sku-checkbox-form">
-                                                            <div class="items-label">
-                                                                <form action="">
-                                                                    <input type="checkbox" id="sell-point" style="transform: scale(1.4);">
-                                                                    <div class="items-label">
-                                                                        <label for="sell-point" style="font-size: .92rem;">Track Inventory for this product</label>
-                                                                        <label for="sell-point">Manage orders, transfers and returns accurately, and get reports and insights on this product’s performance.</label>
+                                                            <div class="sku-box-hide">
+                                                                <div class="sku-box-head">
+                                                                    <div class="row">
+                                                                        <div class="column">Outlet</div>
+                                                                        <div class="column">Current Inventory</div>
+                                                                        <div class="column">Re-order Point</div>
+                                                                        <div class="column">Re-order Quantity</div>
                                                                     </div>
-                                                                </form>
+                                                                </div>
+                                                                <div class="sku-box-body">
+                                                                    <div class="row">
+                                                                        <div class="column">Main Outlet</div>
+                                                                        <div class="column">
+                                                                            <input type="number" class="input">
+                                                                        </div>
+                                                                        <div class="column">
+                                                                            <input type="number" class="input">
+                                                                            <h6 style="text-transform: inherit;"><a href="#">Apply to all</a></h6>
+                                                                        </div>
+                                                                        <div class="column">
+                                                                            <input type="number" class="input">
+                                                                            <h6 style="text-transform: inherit;"><a href="#">Apply to all</a></h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
+                                                    <div id="Paris" class="city" style="display:none">
+                                                        <h2>Paris</h2>
+                                                        <p>Paris is the capital of France.</p>
+                                                    </div>
+                                                    
+                                                    <div id="Tokyo" class="city" style="display:none">
+                                                        <h2>Tokyo</h2>
+                                                        <p>Tokyo is the capital of Japan.</p>
+                                                    </div>
+                                                    <!-- TAB CONTENT ENDS -->
                                                 </div>
-                                                
-                                                <div id="Paris" class="city" style="display:none">
-                                                    <h2>Paris</h2>
-                                                    <p>Paris is the capital of France.</p>
-                                                </div>
-                                                
-                                                <div id="Tokyo" class="city" style="display:none">
-                                                    <h2>Tokyo</h2>
-                                                    <p>Tokyo is the capital of Japan.</p>
-                                                </div>
-                                                </div>
-
-                                                
-                                                
                                             </div>
                                         </div>
                                     </div>
 
-                                    
+                                    <div class="add-product-box package-hide">
+                                        <div class="add-product-settings">
+                                            <h2>Packaging</h2>
+                                            <p>Set up packaging relationships by linking this product to 
+                                                other SKUs. This helps you easily manage the inventory 
+                                                levels across products that come in different packaging.
+                                            </p>
+                                        </div>
+                                        <div class="add-product-forms">
+                                            <div class="forms-tab-container">
+                                                <h3 style="border-bottom: 1px solid var(--whitesmoke); padding-bottom: 8px;">The products that this product comes from.</h3>
+                                                <div class="images-container flex-center">
+                                                    <div>
+                                                        <img src="/images/scanner-v1.svg" alt="icon" style="width: 300px;">
+                                                        <p style="text-align: center;">If this product comes from other products, add the products here.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="product-relationship">
+                                                <button type="button" class="button2" style="width: inherit">Add a Product Relationship</button>
+                                                <h4 style="margin-top: 1.5rem;">The product that this product breaks into. <small style="font-size: 0.5rem;">Products can only break into one other product.</small> </h4>
+                                            </div>
+                                            <div style="display: flex;align-items: center;justify-content: center; padding: 23px 0">
+                                                <div>
+                                                    <img src="/images/scanner-v1.svg" alt="icon" style="width: 300px;">
+                                                    <p style="text-align: center; margin-bottom: 1.4rem;">If this product breaks into another product, add the product here.</p>
+                                                    <button type="button" class="button2" style="width: inherit">Add a Product Relationship</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                     <div class="add-product-box">
                                         <div class="add-product-settings">
                                             <h2>Tax</h2>
@@ -527,8 +586,62 @@
                                             <div class="sku-table-body">
                                                 <div class="row">
                                                     <div class="column">Main Outlet</div>
+                                                    <div class="column" style="position: relative;">
+                                                        <input type="text" class="input sku-tax-hide" value="" readonly>
+
+                                                        <div class="sku-tax-dropdown">
+                                                            <div class="sku-tax-form">
+                                                                <form>
+                                                                    <label for="sku-tax-search" style="font-weight: bolder;">Search all Taxes</label>
+                                                                    <input type="text" class="input" placeholder="Enter Tax">
+                                                                </form>
+                                                                <div class="list-of-sku-tax">
+                                                                    <ul>
+                                                                        <div>
+                                                                            <li onclick="showTax('Default Tax for this Outlet')">Default Tax for this Outlet</li>
+                                                                        </div>
+                                                                       <div>
+                                                                            <li onclick="showTax('No tax')">No Tax</li>
+                                                                       </div>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="add-product-box">
+                                        <div class="add-product-settings">
+                                            <h2>Price</h2>
+                                            <p></p>
+                                        </div>
+                                        <div class="add-product-forms">
+                                            <div class="sku-table-head">
+                                                <div class="row">
+                                                    <div class="column">Supply Price</div>
+                                                    <div class="column">NGN 0.00</div>
+                                                </div>
+                                            </div>
+                                            <div class="sku-table-body">
+                                                <div class="row">
+                                                    <div class="column">Markup</div>
                                                     <div class="column">
-                                                        <input type="text" class="input" readonly>
+                                                        <input type="number" class="input">
+                                                        <div class="mark-icon">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="background: none;">
+                                                    <div class="column">Retail Price <span style="font-size: 0.6rem;"> Excluding Tax</span></div>
+                                                    <div class="column">
+                                                        <input type="number" class="input" placeholder="Enter Amount">
+                                                        <div class="mark-icon">
+                                                            
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -566,6 +679,33 @@
         var skuSupplierInp = document.querySelector('.sku-supplier-input');
         var skuSupplydrop = document.querySelector('.sku-supplier-select');
 
+        var skuTaxInp = document.querySelector('.sku-tax-hide');
+        var skuTaxDrop = document.querySelector('.sku-tax-dropdown');
+
+        var package = document.querySelector('.package-hide');
+        var ch = document.querySelector('.checkB');
+        var skuH = document.querySelector('.sku-box-hide');
+        
+        const checkMe = () => {
+            if (ch.checked === true) {
+                package.classList.toggle('active');
+                skuH.classList.toggle('active')
+            } else {
+                package.classList.toggle('active');
+                skuH.classList.toggle('active')
+            }
+        }
+
+        const showTax = (event) => {
+            skuTaxInp.value = event;
+            skuTaxDrop.classList.toggle('active')
+        }
+
+        skuTaxInp.addEventListener('click', () => {
+            skuTaxDrop.classList.toggle('active')
+        });
+
+
         skuSupplierInp.addEventListener('click', () => {
             skuSupplydrop.classList.toggle('active')
         });
@@ -575,7 +715,7 @@
 
         dropInp.addEventListener('click', () => {
             skuDrop.classList.toggle('active')
-        })
+        });
             
         inp.addEventListener('click', function () {
             containers.classList.toggle('active')

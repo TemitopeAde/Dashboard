@@ -552,11 +552,11 @@ to {opacity: 1}
     background: none;
     color: var(--lightblue);
     transition: 0.7s;
+    border: none
 }
 
 .button2:hover {
     background: var(--blue);
-    background-color: var(--blue);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -576,6 +576,7 @@ to {opacity: 1}
     transition-property: background,color,border,box-shadow;
     transition: all .2s;
     transform: translateX(5px);
+    color: var(--white)
 }
 
 
@@ -1426,7 +1427,6 @@ table.customTable {
 
 .danger-button,
  .button,
- .button2,
  .button-2{
     background-color: var(--crimson);
     font-size: 15px;
@@ -3188,14 +3188,16 @@ button {
 }
 
 .list-of-brands div:hover,
-.list-of-sku-code div:hover{
+.list-of-sku-code div:hover,
+.list-of-sku-tax div:hover{
     background-color: var(--crimson);
     color: var(--white);
     cursor: pointer;
 }
 
 .list-of-brands,
-.list-of-sku-code{
+.list-of-sku-code,
+.list-of-sku-tax{
     transition: .8s;
 }
 
@@ -3206,7 +3208,8 @@ span h5 {
 
 
 .list-of-brands,
-.list-of-sku-code{
+.list-of-sku-code,
+.list-of-sku-tax{
     padding-top: 10px;
 }
 
@@ -3241,7 +3244,8 @@ span h5 {
 
 .list-of-add-type li,
 .list-of-brands li,
-.list-of-sku-code li{
+.list-of-sku-code li,
+.list-of-sku-tax li{
     padding: 12px 25px;
     font-size: 0.85rem;
     transition: 0.85s;
@@ -3255,7 +3259,8 @@ span h5 {
 
 .list-of-brands ul > div,
 .list-of-add-type ul > div,
-.list-of-sku-code ul > div{
+.list-of-sku-code ul > div,
+.list-of-sku-tax ul > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -3267,7 +3272,8 @@ span h5 {
 
 .list-of-brands ul > div button,
 .list-of-add-type ul > div button,
-.list-of-sku-code ul > div button{
+.list-of-sku-code ul > div button,
+.list-of-sku-tax ul > div button{
     height: inherit;
     width: inherit;
     margin-right: 4px;
@@ -3552,6 +3558,7 @@ form.dragover {
     left: 0;
     padding: 13px;
     display: none;
+    z-index: 1000;
 }
 
 .sku-supplier-select.active {
@@ -3576,6 +3583,106 @@ form.dragover {
 .sku-table-body .row:first-of-type {
     padding-top: 25px
 }
+
+.sku-tax-dropdown {
+    background: var(--white);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    display: none;
+}
+.sku-tax-dropdown.active {
+    display: block;
+}
+
+label {
+    font-weight: bolder;
+}
+
+.sku-box-body .row,
+.sku-box-head .row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 15px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sku-box-head .row{
+    font-size: .8rem;
+    font-weight: bolder;
+    color: var(--crimson);
+    padding-top: 30px;    
+}
+
+.sku-box-hide {
+    padding: 30px 0;
+    display: none;
+}
+
+.sku-box-hide.active {
+    display: block;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.product-relationship {
+    padding: 40px 0;
+    border-top: 1px solid var(--whitesmoke);
+    border-bottom: 1px solid var(--whitesmoke);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.package-hide {
+    display: none;
+}
+
+.package-hide.active {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

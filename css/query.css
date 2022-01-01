@@ -506,9 +506,9 @@
         padding: .5rem;
     }
 
-    .input {
-        padding-left: 3px;
-    }
+    /* .input {
+        padding-left: 7px;
+    } */
 
     .user-table-row {
         align-items: center;

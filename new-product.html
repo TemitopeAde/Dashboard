@@ -441,7 +441,7 @@
                                                                 </div>
 
                                                                 <div class="sku-add-button" style="position: absolute;">
-                                                                    <button type="button" class="cancel-button">Add New Code</button>
+                                                                    <button type="button" class="button2">Add New Code</button>
                                                                 </div>
                                                             </form>
                                                             
@@ -523,13 +523,58 @@
                                                     </div>
                                                     
                                                     <div id="Paris" class="city" style="display:none">
-                                                        <h2>Paris</h2>
-                                                        <p>Paris is the capital of France.</p>
+                                                        <div class="sku-2-box">
+                                                            <div class="sku-2-supplier">
+                                                                <label for="sku-2-supplier">Supplier</label>
+                                                                <input type="text" class="input" placeholder="Choose a supplier" readonly>
+                                                            </div>
+                                                            <div class="sku-2-supplier">
+                                                                <label for="sku-2-supplier">Supplier Code</label>
+                                                                <input type="text" class="input" placeholder="Enter the Supplier Code">
+                                                            </div>
+                                                            <div class="sku-2-supplier">
+                                                                <label for="sku-2-supplier">Supplier Price</label>
+                                                                <input type="number" class="input" placeholder="Enter the amount">
+                                                            </div>
+                                                        </div>
+                                                        <div class="sku-checkbox-form" style="padding: 30px 0">
+                                                            <div class="items-label">
+                                                                <form action="">
+                                                                    <input type="checkbox" id="sell-point" style="transform: scale(1.4);" class="checkB">
+                                                                    <div class="items-label">
+                                                                        <label for="sell-point" style="font-size: .92rem;">Track Inventory for this product</label>
+                                                                        <label for="sell-point">Manage orders, transfers and returns accurately, and get reports and insights on this product’s performance.</label>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     
                                                     <div id="Tokyo" class="city" style="display:none">
-                                                        <h2>Tokyo</h2>
-                                                        <p>Tokyo is the capital of Japan.</p>
+                                                        <div class="third-tab">
+                                                            <div class="card">
+                                                                
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="radio" name="name" id="one" checked />
+                                                                        
+                                                                        <label for="one" style="padding: 12px;padding-bottom: 5px;">
+                                                                            Automatically Generate a SKU
+                                                                            A SKU will automatically be generated once this product has been saved.
+                                                                            </label>
+                                                                        
+                                                                        <div class="check"></div>
+                                                                    </li>
+                                                                    
+                                                                    <li>
+                                                                        <input type="radio" name="name" id="two" />
+                                                                        <label for="two">Enter a custom SKU</label>
+                                                                        <div class="check"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
                                                     </div>
                                                     <!-- TAB CONTENT ENDS -->
                                                 </div>
@@ -647,6 +692,40 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="add-product-box">
+                                        <div class="add-product-settings">
+                                            <h2>Variants</h2>
+                                            <p>Choose up to three variable attributes for this product to create and manage SKUs and their inventory levels.</p>
+                                        </div>
+                                        <div class="add-product-forms">
+                                            <div class="add-forms-at">
+                                                <div class="attributes" style="position: relative">
+                                                    <label for="atrr">Attributes (e.g. Colour)</label>
+                                                    <input type="text" class="input attin" placeholder="Choose an attribute" readonly>
+                                                    <div class="attri-dropdown" style="position: absolute;">
+                                                        <form action="">
+                                                            <label for="add-new-attr">Add a new attribute</label>
+                                                            <input type="text" id="add-new-attr" class="input input-attr" value="">
+                                                        </form>
+                                                        <a href="#" class="attr-hide">
+                                                            <button type="button" style="border: none; outline: none; background: none;">Add<span class="add-attr-btn" style="display: inline-block; margin-left: 5px;"></span> as a new attribute</button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="attributes">
+                                                    <label for="sku-value">Value (e.g. Red, Blue, Green)</label>
+                                                    <input type="text" class="input" placeholder="Enter a value">
+                                                </div>
+                                            </div>
+                                            <div style="padding-top: 25px;">
+                                                <button type="button" class="button2" style="width: inherit">Add another attribute</button>
+                                                <div style="margin-top: 1.rem;">
+                                                    <h3 style="color: black">This product has 0 variants</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -685,6 +764,27 @@
         var package = document.querySelector('.package-hide');
         var ch = document.querySelector('.checkB');
         var skuH = document.querySelector('.sku-box-hide');
+
+        var varCont = document.querySelector('.attri-dropdown');
+        var varInp = document.querySelector('.attin');
+        var attr = document.querySelector('#add-new-attr');
+
+        var attrBtn = document.querySelector('.add-attr-btn');
+        var attrH = document.querySelector('.attr-hide')
+
+
+        attr.addEventListener('input', (e) => {
+            attrBtn.innerHTML = e.target.value;
+            console.log(attrBtn)
+            
+            if (attrBtn) {
+                attrH.classList.add('active')
+            }
+        })
+
+        varInp.addEventListener('click', ()=> {
+            varCont.classList.toggle('active');
+        });
         
         const checkMe = () => {
             if (ch.checked === true) {

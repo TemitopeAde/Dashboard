@@ -3515,7 +3515,8 @@ form.dragover {
     align-items: center;
 }
 
-.sku-preview {
+.sku-preview,
+.promotion-preview div{
     padding: 25px;
     background: var(--white);
 }
@@ -3771,6 +3772,228 @@ input[type=number] {
 
 /* Radio Input #2  */
 .third-tab input#two:checked ~ .check { transform: translate(-50px, -25px); }
+
+
+.radio-check-hide {
+    display: none;
+}
+
+.radio-check-hide.active {
+    display: block;
+}
+
+.variant-box-hide {
+    display: none;
+}
+
+.variant-box-hide.active {
+    display: block
+}
+
+.promotion-tabs {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+}
+
+/* .tabClick {
+    display: flex;
+} */
+
+.tabClick div label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+}
+
+.promotion {
+    padding-bottom: 1rem;
+}
+
+.promotion-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.promotion-2-form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    padding: 1.5rem 0
+}
+
+.promotion-box-wrap {
+    padding: 3rem
+}
+
+
+.promotion-sect {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.promotion-tabs section {
+    display: flex;
+    flex-flow: row wrap;
+}
+  
+  .promotion-tabs section > div {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  
+  .promotion-tabs input[type="radio"] {
+    display: none;
+  }
+  .promotion-tabs input[type="radio"]:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  .promotion-tabs input[type="radio"]:disabled ~ label {
+    color: #bcc2bf;
+    border-color: #bcc2bf;
+    box-shadow: none;
+  }
+  
+  .promotion-tabs label {
+    display: block;
+    background: white;
+    border: 1px solid var(--lightblue);
+    border-radius: 2px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+    position: relative;
+  }
+  
+  .promotion-tabs input[type="radio"]:checked + label {
+    background: var(--lightblue);
+    color: white;
+  }
+  .promotion-tabs input[type="radio"]:checked + label::after {
+    color: #3d3f43;
+    border: 2px solid var(--lightblue);
+    /* content: "\f00c"; */
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .promotion-tabs section {
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+
+
+  
+  .discount-tab section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .discount-tab section > div {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  
+  .discount-tab input[type="radio"] {
+    display: none;
+  }
+  .discount-tab input[type="radio"]:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  .discount-tab input[type="radio"]:disabled ~ label {
+    color: #bcc2bf;
+    border-color: #bcc2bf;
+    box-shadow: none;
+  }
+  
+  .discount-tab label {
+    display: block;
+    background: white;
+    border: 1px solid #20df80;
+    border-radius: 2px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0px 3px 10px -2px rgba(161, 170, 166, 0.5);
+    position: relative;
+  }
+  
+  .discount-tab input[type="radio"]:checked + label {
+    background: #20df80;
+    color: white;
+  }
+  .discount-tab input[type="radio"]:checked + label::after {
+    color: #3d3f43;
+    font-family: FontAwesome;
+    border: 2px solid var(--lightblue);
+    content: "\f00c";
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .discount-tab .label-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    flex-direction: column;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .discount-tab section {
+      flex-direction: column;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

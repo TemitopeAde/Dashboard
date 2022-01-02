@@ -31,10 +31,46 @@
     .row {
         font-size: 0.76rem;
     }
+
+    .add-product-box {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .tab-menu-item label {
+        height: 400px;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
+
+    ::placeholder {
+        font-size: 0.67rem;
+    }
+
+    .sku-form-box,
+    .sku-2-box{
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
+
+    .sku-form-box label {
+        font-size: .7rem;
+    }
+
+    .sku-container, .sku-container form {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .forms-tab-container section {
+        flex-direction: column;
+    }
+
+    .tab-menu-item label {
+        height: 250px;
+    }
 
     .report-cap {
         padding: 2rem 1rem;
@@ -458,9 +494,7 @@
 }
 
 
-
-
-
+@media only screen and (max-width: 540px) {
     .giftcard-form .form-container,
     .register-input{
         width: 100%;
@@ -545,7 +579,15 @@
     .inventory-table-head .column{
         font-size: 0.6rem;
     }
+
+    
+
+    
 }
+
+
+    
+
 
 
 

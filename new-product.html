@@ -522,7 +522,7 @@
                                                         </div>
                                                     </div>
                                                     
-                                                    <div id="Paris" class="city" style="display:none">
+                                                    <div id="Paris" class="city" style="display:none" onclick="showVariant()">
                                                         <div class="sku-2-box">
                                                             <div class="sku-2-supplier">
                                                                 <label for="sku-2-supplier">Supplier</label>
@@ -556,9 +556,9 @@
                                                                 
                                                                 <ul>
                                                                     <li>
-                                                                        <input type="radio" name="name" id="one" checked />
+                                                                        <input type="radio" name="name" id="one" class="radioChs" onclick="showRadio()" checked />
                                                                         
-                                                                        <label for="one" style="padding: 12px;padding-bottom: 5px;">
+                                                                        <label for="one" >
                                                                             Automatically Generate a SKU
                                                                             A SKU will automatically be generated once this product has been saved.
                                                                             </label>
@@ -567,9 +567,17 @@
                                                                     </li>
                                                                     
                                                                     <li>
-                                                                        <input type="radio" name="name" id="two" />
+                                                                        <input type="radio" class="radioCh" name="name" id="two" onclick="showRadio()" />
                                                                         <label for="two">Enter a custom SKU</label>
                                                                         <div class="check"></div>
+
+                                                                        <div class="radio-check-hide" style="padding-top: 1rem">
+                                                                            <input type="text" placeholder="Enter SKU" class="input">
+                                                                            <small>
+                                                                                <h6 style="text-transform: inherit">Only use lower case letters and numbers, no symbols or spaces.</h6>
+                                                                            </small>
+                                                                            
+                                                                        </div>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -693,7 +701,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="add-product-box">
+                                    <div class="add-product-box variant-box-hide">
                                         <div class="add-product-settings">
                                             <h2>Variants</h2>
                                             <p>Choose up to three variable attributes for this product to create and manage SKUs and their inventory levels.</p>
@@ -721,7 +729,7 @@
                                             <div style="padding-top: 25px;">
                                                 <button type="button" class="button2" style="width: inherit">Add another attribute</button>
                                                 <div style="margin-top: 1.rem;">
-                                                    <h3 style="color: black">This product has 0 variants</h3>
+                                                    <h3 style="color: rgb(20, 20, 20)">This product has 0 variants</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -770,7 +778,29 @@
         var attr = document.querySelector('#add-new-attr');
 
         var attrBtn = document.querySelector('.add-attr-btn');
-        var attrH = document.querySelector('.attr-hide')
+        var attrH = document.querySelector('.attr-hide');
+
+        var rChk = document.querySelector('.radio-check-hide');
+        var chRadio = document.querySelector('.radioCh');
+        var chRadios = document.querySelector('.radioChs');
+
+        var par = document.querySelector('#Tokyo');
+        var varBox = document.querySelector('.variant-box-hide');
+
+        console.log(par)
+        par.addEventListener('click', function () {
+            console.log('mew')
+        })
+
+
+        const showRadio = () => {
+            if (chRadio.checked === true) {
+                rChk.classList.add('active')
+            } else if (chRadio.checked === false) {
+                rChk.classList.remove('active')
+            }
+            
+        }
 
 
         attr.addEventListener('input', (e) => {
